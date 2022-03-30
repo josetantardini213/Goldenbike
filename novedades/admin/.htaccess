@@ -1,0 +1,45 @@
+Options All -Indexes
+
+RewriteEngine On 
+RewriteCond %{HTTPS} off 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteRule ^(canitas)$ tienda.php?landing=$1
+RewriteRule ^(villaurquiza)$ tienda.php?landing=$1
+RewriteRule ^(villadevoto)$ tienda.php?landing=$1
+RewriteRule ^(belgrano)$ tienda.php?landing=$1
+RewriteRule ^(recoleta)$ tienda.php?landing=$1
+RewriteRule ^(caballito)$ tienda.php?landing=$1
+RewriteRule ^(acasusso)$ tienda.php?landing=$1
+RewriteRule ^(nordelta)$ tienda.php?landing=$1
+RewriteRule ^(olivos)$ tienda.php?landing=$1
+RewriteRule ^(tom)$ tienda.php?landing=$1
+RewriteRule ^(sanmiguel)$ tienda.php?landing=$1
+RewriteRule ^(parqueleloir)$ tienda.php?landing=$1
+RewriteRule ^(lomasdezamora)$ tienda.php?landing=$1
+RewriteRule ^(quilmes)$ tienda.php?landing=$1
+RewriteRule ^(montegrande)$ tienda.php?landing=$1
+RewriteRule ^(laplata)$ tienda.php?landing=$1
+RewriteRule ^(olavarria)$ tienda.php?landing=$1
+RewriteRule ^(blog)$ blog.php
+RewriteRule ^(nosotros)$ nosotros.php
+RewriteRule ^(home)$ index.php
+RewriteRule ^(franquicias)$ franquicias.php
+
+
+
+
+RewriteRule ^(cascosparabicicleta)$ noticia.php?n=$1
+RewriteRule ^(bicicletasparachicos)$ noticia.php?n=$1
+RewriteRule ^(beneficiosdeandarenbicicleta)$ noticia.php?n=$1
+RewriteRule ^(portabicicletaparaauto)$ noticia.php?n=$1
+RewriteRule ^(circuitosbicicletabuenosaires)$ noticia.php?n=$1
+RewriteRule ^(comoelegirunabicicleta)$ noticia.php?n=$1
+RewriteRule ^(accesoriosbicicleta)$ noticia.php?n=$1
+RewriteRule ^(cuidadosbicicleta)$ noticia.php?n=$1
+RewriteRule ^(elongacionespostbicicleteada)$ noticia.php?n=$1

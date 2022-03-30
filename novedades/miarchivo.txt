@@ -1,0 +1,1 @@
+RewriteRule ^(holasoytut)$ noticia.php?n=$1

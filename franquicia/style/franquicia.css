@@ -1,0 +1,156 @@
+body {
+    background-color: white;
+}
+
+.imgfranquicia {
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 10px 1px;
+    position: relative;
+}
+
+.h1franquicia {
+    font-size: 45px;
+}
+
+@media(max-width:700px) {
+    .imgfranquicia {
+        position: absolute;
+        top: 0px;
+    }
+}
+
+div.noticia {
+    margin-top: 50px !important;
+    width: 70%;
+    margin: 20px auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px 0.2px;
+    color: rgb(0, 0, 0);
+    border-radius: 2px;
+    padding: 15px;
+}
+
+@media (max-width:900px) {
+    div.noticia {
+        margin-top: 80px !important;
+    }
+}
+
+@media (max-width:700px) {
+    div.noticia {
+        margin-top: 250px !important;
+    }
+}
+
+@media (max-width:450px) {
+    div.noticia {
+        margin-top: 200px !important;
+    }
+}
+
+div.noticia img.izquierda {
+    float: left;
+    margin-right: 25px;
+}
+
+div.reset {
+    clear: both;
+}
+
+.noticia p {
+    margin: 30px;
+    font-size: 17px;
+}
+
+.botonmonto {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    width: 90%;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+@media (max-width:900px) {
+    .h1franquicia {
+        margin-top: 25px;
+        text-align: center;
+    }
+    .noticia {
+        width: 95% !important;
+    }
+    .noticia p {
+        display: block !important;
+        justify-content: center;
+        text-align: center;
+    }
+    div.noticia img.izquierda {
+        float: none !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    .botonmonto {
+        font-size: 13px;
+        width: 100%;
+        margin-left: 0px !important;
+    }
+}
+
+@media (max-width:500px) {
+    div.noticia img.izquierda {
+        width: 100%;
+    }
+}
+
+#nombrePersona {
+    background-image: url('../img/user_icon-icons.com_57997.svg');
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: 20px;
+}
+
+#apellidoPersona {
+    background-image: url('../img/user_icon-icons.com_57997.svg');
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: 20px;
+}
+
+#provincias {
+    background-image: url('../img/pin_gps_location_find_map_search_icon-icons.com_59982.svg');
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: 25px;
+}
+
+#localidad {
+    background-image: url('../img/pin_gps_location_find_map_search_icon-icons.com_59982.svg');
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: 25px;
+}
+
+#telefono {
+    background-image: url('../img/mobilephone_79875.svg');
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: 27px;
+}
+
+#email {
+    background-image: url('../img/mail_email_message_electronic_online_web_icon-icons.com_59986.svg');
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: 22px;
+}
+
+#consulta {
+    background-image: url('../img/note-task-comment-message-edit-write_108613.svg');
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: 22px;
+}

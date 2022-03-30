@@ -1,0 +1,72 @@
+.subirimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.subirimg input[type=file] {
+    margin-bottom: 20px;
+}
+
+.subirimg input[type=submit] {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(216, 216, 216);
+}
+
+.subirimg input[type=submit]:active {
+    transform: perspective(500px) translateZ(-30px);
+}
+
+.contentimg {
+    width: 300px;
+    height: 100%;
+    margin-left: 25px;
+    margin-right: 10px;
+}
+
+.contentimg input[type=submit] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: red;
+    border-radius: 10px;
+    width: 100px;
+    border: none;
+    padding: 5px;
+    color: white;
+}
+
+.contentimg input[type=submit] :active {
+    transform: perspective(500px) translateZ(-30px);
+}
+
+.contentimg img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+
+.contentimg p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.contentmuestraimg {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

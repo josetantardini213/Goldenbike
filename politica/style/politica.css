@@ -1,0 +1,48 @@
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+   
+@font-face {
+    font-family: 'bebas';
+    src: url('../../fuente/BebasNeue-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'monserrat';
+    src: url('../../fuente/Montserrat-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+h1{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    display: flex;
+    word-wrap: break-word;
+    display: flex;
+    margin: auto;
+    font-size:50px;
+    font-family: bebas;
+padding: 50px;
+}
+
+
+p{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    word-wrap: break-word;
+    font-size: 20px;
+padding: 50px;
+    margin: auto;
+    font-family: monserrat;
+}

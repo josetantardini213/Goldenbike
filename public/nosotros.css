@@ -1,0 +1,348 @@
+            body {
+                background-color: white;
+            }
+            
+            .h1nosotros {
+                margin-top: 10vw;
+                font-size: 6vw;
+                font-weight: 100;
+                width: 100%;
+                transition: 1s;
+                z-index: 100;
+                display: flex;
+                float: left !important;
+                top: -100px;
+            }
+            
+            @media (max-width: 650px) {
+                .h1nosotros {
+                    font-size: 9.8vw;
+                }
+            }
+            
+            .nuestratienda {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            
+            .contentimgtext {
+                padding: 70px;
+                display: flex;
+                object-fit: cover;
+            }
+            
+            .contentimgtext img {
+                border-radius: 2px;
+                width: 864px;
+                height: 600px;
+                object-fit: cover;
+            }
+            
+            .contenedorinternoimgtext {
+                background-color: white;
+                position: absolute;
+                left: 40vw;
+                padding: 20px;
+                word-wrap: break-word;
+                margin-top: 150px;
+                border-radius: 2px;
+                width: 700px;
+            }
+            
+            .contenedorinternoimgtext strong {
+                font-size: 22px;
+            }
+            
+            .contenedorinternoimgtext p {
+                font-family: monserrat;
+                font-size: 19px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            .contenedorinternoimgtext h1 {
+                font-size: 55px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            @media (max-width:1100px) {
+                .contentimgtext {
+                    display: block;
+                    padding: 0;
+                }
+                .contentimgtext img {
+                    width: 100%;
+                    height: 100%;
+                }
+                .contenedorinternoimgtext {
+                    position: relative !important;
+                    top: 0;
+                    left: 0;
+                    margin: auto;
+                    text-align: center;
+                    padding: 0;
+                    width: 100%;
+                }
+                .contenedorinternoimgtext h1 {
+                    font-size: 8vw;
+                }
+                .contenedorinternoimgtext strong {
+                    font-size: 4vw;
+                }
+                .contenedorinternoimgtext p {
+                    font-size: 3.5vw;
+                }
+            }
+            
+            @media (max-width:370px) {
+                .contenedorinternoimgtext h1 {
+                    font-size: 9vw;
+                }
+                .contenedorinternoimgtext strong {
+                    font-size: 4.2vw;
+                }
+                .contenedorinternoimgtext p {
+                    font-size: 3.9vw;
+                }
+            }
+            
+            .contentimgtext2 {
+                padding: 70px;
+                display: flex;
+                float: right;
+                overflow: hidden;
+                object-fit: cover;
+            }
+            
+            .contentimgtext2 img {
+                width: 864px;
+                height: 600px;
+                object-fit: cover;
+                border-radius: 2px;
+            }
+            
+            .contenedorinternoimgtext2 {
+                background-color: white;
+                position: absolute;
+                left: 15vw;
+                width: 700px;
+                padding: 20px;
+                word-wrap: break-word;
+                margin-top: 150px;
+                border-radius: 2px;
+            }
+            
+            .contenedorinternoimgtext2 strong {
+                font-size: 22px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            .contenedorinternoimgtext2 p {
+                font-family: monserrat;
+                font-size: 19px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            .contenedorinternoimgtext2 h1 {
+                font-size: 55px;
+                word-wrap: break-word;
+            }
+            
+            @media (max-width:1100px) {
+                .contentimgtext2 {
+                    display: block;
+                    padding: 0;
+                    margin-top: 40px;
+                    margin-bottom: 40px;
+                }
+                .contentimgtext2 img {
+                    width: 100%;
+                    height: 100%;
+                }
+                .contenedorinternoimgtext2 {
+                    position: relative !important;
+                    top: 0;
+                    left: 0;
+                    margin: auto;
+                    text-align: center;
+                    padding: 0;
+                    width: 100%;
+                }
+                .contenedorinternoimgtext2 h1 {
+                    font-size: 8vw;
+                }
+                .contenedorinternoimgtext2 strong {
+                    font-size: 4vw;
+                }
+                .contenedorinternoimgtext2 p {
+                    font-size: 3.5vw;
+                }
+            }
+            
+            @media (max-width:370px) {
+                .contenedorinternoimgtext2 h1 {
+                    font-size: 9vw;
+                }
+                .contenedorinternoimgtext2 strong {
+                    font-size: 4.2vw;
+                }
+                .contenedorinternoimgtext2 p {
+                    font-size: 3.9vw;
+                }
+            }
+            
+            .mision {
+                text-align: center;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .mision>h2 {
+                margin-top: 70px;
+                font-size: 4.3vw;
+                margin-bottom: 20px;
+            }
+            
+            .mision p {
+                font-size: 1.4vw;
+                margin-bottom: 35px;
+            }
+            
+            .textobackblack {
+                background-color: black;
+                color: #CEA965;
+                padding: 30px;
+                font-size: 3vw;
+                margin-bottom: 20px;
+            }
+            
+            .textobackblack h2 {
+                font-family: book !important;
+            }
+            
+            @media (max-width:900px) {
+                .mision>h2 {
+                    font-size: 5.3vw;
+                }
+                .mision p {
+                    font-size: 2.4vw;
+                }
+                .textobackblack {
+                    font-size: 4vw;
+                    font-family: book !important;
+                }
+            }
+            
+            @media (max-width:600px) {
+                .mision>h2 {
+                    font-size: 7.3vw;
+                }
+                .mision p {
+                    font-size: 3.4vw;
+                }
+                .textobackblack {
+                    font-size: 5vw;
+                    font-family: book !important;
+                }
+            }
+            
+            @media (max-width:400px) {
+                .mision>h2 {
+                    font-size: 10.3vw;
+                }
+                .mision p {
+                    font-size: 4.4vw;
+                }
+                .textobackblack {
+                    font-size: 6vw;
+                    font-family: book !important;
+                }
+            }
+            
+            .vision {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 70px;
+                margin-bottom: 70px;
+                width: 100%;
+            }
+            
+            .vision p {
+                width: 13%;
+                margin: 20px;
+                font-size: 1.2vw;
+            }
+            
+            .vision h1 {
+                font-size: 2.2vw;
+            }
+            
+            .lineavision {
+                width: 50px;
+                background-color: #7F7F7F;
+                height: 2px;
+            }
+            
+            @media (max-width:1100px) {
+                .vision p {
+                    font-size: 1.6vw;
+                }
+                .vision h1 {
+                    font-size: 3vw;
+                }
+            }
+            
+            @media (max-width:900px) {
+                .vision p {
+                    font-size: 3.6vw;
+                }
+                .vision h1 {
+                    font-size: 7vw;
+                }
+                .lineavision {
+                    display: none;
+                }
+                .vision {
+                    flex-direction: column;
+                }
+                .vision p {
+                    width: 80%;
+                    text-align: center;
+                }
+                .queremos {
+                    border-bottom: 0px solid #7F7F7F !important;
+                }
+                .columnavision {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center !important;
+                    padding: 0px !important;
+                    margin: 0 !important;
+                    margin-right: 30px !important;
+                }
+                .columnavision h1 {
+                    margin-left: 18px !important;
+                }
+                .textoprincipal {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    width: 100% !important;
+                }
+            }
+            
+            @media (max-width:400px) {
+                .vision p {
+                    font-size: 4vw;
+                }
+                .vision h1 {
+                    font-size: 8vw;
+                }
+            }
