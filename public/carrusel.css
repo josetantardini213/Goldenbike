@@ -37,7 +37,6 @@
 
 .element img {
     border-radius: 15px;
-    margin-bottom: 39px !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,7 +83,13 @@
     font-weight: bolder;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
-    background-color: rgba(0, 170, 34, 0.885);
+    background-color: rgba(0, 0, 0, 0.885);
     opacity: 0;
     transition: 0.5s;
+}
+
+@media (max-width:700px) {
+    .mensajeespecial {
+        width: 100%;
+    }
 }

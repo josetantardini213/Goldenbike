@@ -33,7 +33,7 @@
 
 
 
-<div class="container-fluid aparece" style="margin-top:100px;">
+<div class="container-fluid aparece" >
         <div class="container box-ficha wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
             <div class="row">
                 <section class="col-12 col-sm-12 col-md-12 col-lg-7">
@@ -59,7 +59,7 @@
                             </tr>
                             <tr>
                                 <td class="itemFicha">Franquicias en operación en Argentina</td>
-                                <td class="contentFicha">23</td>
+                                <td class="contentFicha">+30</td>
                             </tr>
                             <tr>
                                 <td class="itemFicha">Franquicias en operación en el exterior</td>
@@ -82,7 +82,7 @@
                                     <td class="contentFicha">USD 20.000</td>
                                 </tr>
                                  <tr>
-                                    <td class="itemFicha">Inversión inicial sin stock</td>
+                                    <td class="itemFicha">Diseño y obra del local</td>
                                     <td class="contentFicha">Desde USD 10.000</td>
                                 </tr>
                                 <tr>
@@ -107,11 +107,11 @@
                                 </tr>
                                 <tr>
                                     <td class="itemFicha">Duración del contrato</td>
-                                    <td class="contentFicha">6 años renovables</td>
+                                    <td class="contentFicha">5 años renovables</td>
                                 </tr>
                                 <tr>
                                     <td class="itemFicha">Recupero de la inversión</td>
-                                    <td class="contentFicha">Entre 8 y 12 meses</td>
+                                    <td class="contentFicha">+18 meses</td>
                                 </tr>
                                 <tr>
                                     <td class="itemFicha">Franquicia exportable a países</td>
@@ -124,7 +124,7 @@
                 </section>
                 <aside class="col-12 col-sm-12 col-md-12 col-lg-5" id="box-formFranquicia" >
                    
-                    <div id="formFranquicia" style="margin-top:100px;">
+                    <div id="formFranquicia" >
                         
                         <h4>Contactanos</h4>
 

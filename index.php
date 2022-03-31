@@ -94,14 +94,17 @@ $highestColumn = $sheet -> getHighestColumn();
 
         <div class="center">
        
-       <?php for ($fila = 2; $fila <= $highestRow; $fila++){
+       <?php
+       $cont = 0;
+       for ($fila = 2; $fila <= $highestRow; $fila++){
    if($sheet->getCell("A".$fila)->getValue() != ""){
+       $cont +=1;
 ?>
         <div class="element">
-            <img src="<?php  echo "./img/".$sheet->getCell("D".$fila)->getValue(); ?>" alt="Bicicleta">
+            <img src="<?php  echo "./catalogoimg/".$sheet->getCell("D".$fila)->getValue(); ?>" id='<?php echo $cont; ?>' alt="Bicicleta">
             <h2><?php  echo $sheet->getCell("A".$fila)->getValue(); ?></h2>
-            <p class="especial"><?php  echo "$".number_format($sheet->getCell("B".$fila)->getValue(),2, ',','.'); ?></p>
-            <p><strong><?php  echo "$".number_format($sheet->getCell("C".$fila)->getValue(),2, ',','.'); ?></strong></p>
+            <p class="especial"><?php  if($sheet->getCell("B".$fila)->getValue() != "") { echo "$".number_format($sheet->getCell("B".$fila)->getValue(),2, ',','.'); }?></p>
+            <p><strong><?php  if($sheet->getCell("C".$fila)->getValue() != "") { echo "$".number_format($sheet->getCell("C".$fila)->getValue(),2, ',','.'); }?></strong></p>
         </div>
        <?php }} ?>
     </div>
@@ -480,6 +483,12 @@ $highestColumn = $sheet -> getHighestColumn();
         }
      
     </script>
+    
+</script>
+
+<script>
+
+
     
 </script>
 
