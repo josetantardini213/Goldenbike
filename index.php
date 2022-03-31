@@ -98,6 +98,7 @@ $highestColumn = $sheet -> getHighestColumn();
        $cont = 0;
        for ($fila = 2; $fila <= $highestRow; $fila++){
    if($sheet->getCell("A".$fila)->getValue() != ""){
+       
        $cont +=1;
 ?>
         <div class="element">
