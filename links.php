@@ -23,12 +23,12 @@
 <div class="loading" id="loading">
 <div id="loading-center">
 <div id="loading-center-absolute">
-<h1>GOLDENBIKE</h1>
+<img src="https://www.goldenbike.com.ar/img/Goldenbike-logo-blanco.svg"  width=100% alt="">
+<!--<img src="https://goldenbike.com.ar/img/rueda.svg" alt="rueda">-->
 </div>
 </div>
  
 </div>
-
 <?php
 include "./novedades/funciones/conexion.php";
 
@@ -186,6 +186,7 @@ include "./novedades/funciones/conexion.php";
 
         }
     </script>
+    <script src="./public/scripts.js"></script>
 
 </body>
 

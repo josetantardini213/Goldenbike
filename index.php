@@ -33,20 +33,20 @@
 <?php
  include "./Content/menu.php";
 
+// AQUI ESTA EL CARRUSEL EXCEL
+ //$archivo = "./carrusel/carruselproductos.xlsx";
 
- $archivo = "./carrusel/carruselproductos.xlsx";
+ //require_once './landing/phpexcel/Classes/PHPExcel.php';
 
- require_once './landing/phpexcel/Classes/PHPExcel.php';
-
-$inputFileType = PHPExcel_IOFactory::identify($archivo);
-$objReader = PHPExcel_IOFactory::createReader($inputFileType);
-$objPHPExcel = $objReader->load($archivo);
+//$inputFileType = PHPExcel_IOFactory::identify($archivo);
+//$objReader = PHPExcel_IOFactory::createReader($inputFileType);
+//$objPHPExcel = $objReader->load($archivo);
 
 
-$sheet = $objPHPExcel->getSheet(0);
-$highestRow = $sheet -> getHighestRow();
-$highestColumn = $sheet -> getHighestColumn();
-
+//$sheet = $objPHPExcel->getSheet(0);
+//$highestRow = $sheet -> getHighestRow();
+//$highestColumn = $sheet -> getHighestColumn();
+// AQUI ESTA EL CARRUSEL EXCEL FIN
 
 ?>
 
@@ -83,7 +83,9 @@ $highestColumn = $sheet -> getHighestColumn();
             
         </div>
 
-
+ <!-- 
+     
+      AQUI ESTA EL CARRUSEL 
 <div class="mensajeespecial">
 
 <p>Seleccione la tienda en la cual desea comprar su bicicleta</p>
@@ -92,24 +94,28 @@ $highestColumn = $sheet -> getHighestColumn();
 
 
 
-        <div class="center">
+     
+      AQUI ESTA EL CARRUSEL    
+      <div class="center">
        
        <?php
-       $cont = 0;
-       for ($fila = 2; $fila <= $highestRow; $fila++){
-   if($sheet->getCell("A".$fila)->getValue() != ""){
+       //$cont = 0;
+       //for ($fila = 2; $fila <= $highestRow; $fila++){
+   //if($sheet->getCell("A".$fila)->getValue() != ""){
        
-       $cont +=1;
+     //  $cont +=1;
 ?>
         <div class="element">
-            <img src="<?php  echo "./catalogoimg/".$sheet->getCell("D".$fila)->getValue(); ?>" id='<?php echo $cont; ?>' alt="Bicicleta">
-            <h2><?php  echo $sheet->getCell("A".$fila)->getValue(); ?></h2>
-            <p class="especial"><?php  if($sheet->getCell("B".$fila)->getValue() != "") { echo "$".number_format($sheet->getCell("B".$fila)->getValue(),2, ',','.'); }?></p>
-            <p><strong><?php  if($sheet->getCell("C".$fila)->getValue() != "") { echo "$".number_format($sheet->getCell("C".$fila)->getValue(),2, ',','.'); }?></strong></p>
+            <img src="<?php // echo "./catalogoimg/".$sheet->getCell("D".$fila)->getValue(); ?>" id='<?php echo $cont; ?>' alt="Bicicleta">
+            <h2><?php // echo $sheet->getCell("A".$fila)->getValue(); ?></h2>
+            <p class="especial"><?php // if($sheet->getCell("B".$fila)->getValue() != "") { echo "$".number_format($sheet->getCell("B".$fila)->getValue(),2, ',','.'); }?></p>
+            <p><strong><?php //  if($sheet->getCell("C".$fila)->getValue() != "") { echo "$".number_format($sheet->getCell("C".$fila)->getValue(),2, ',','.'); }?></strong></p>
         </div>
-       <?php }} ?>
+       <?php // }} ?>
     </div>
 
+      AQUI ESTA EL CARRUSEL FIN   
+-->
 
 
   <!--
@@ -250,11 +256,6 @@ $highestColumn = $sheet -> getHighestColumn();
 
 
 
-
-
-
-
-   
 
 
     <section>
