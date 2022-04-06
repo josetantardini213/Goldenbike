@@ -43,13 +43,15 @@ window.onunload = function() {
  
     <?php include "../../funciones/conexion.php"; 
     
-    
-    
+    include "../../funciones/modificar.php";
+
+    ?><div id="sql"><?php
     $publicacion = "SELECT url,portada,shortdescription,archivo,titulo,descripcion,id_publicacion FROM publicacionesblog WHERE id_publicacion='".$_GET['modifi']."'"; 
     
     $publicacion2=mysqli_query($conexion,$publicacion);
-    
+    ?></div><?php
     if($pub = mysqli_fetch_array($publicacion2)){
+
 
     
     ?>
@@ -138,7 +140,7 @@ if(isset($_SESSION['user']) && $_SESSION['usertype'] == 1){
            
         </script>
         <div class="publinovedades">
-    <input type="submit" class="btnpublicar" name="Publicar"  value="Publicar">
+    <input type="submit" class="btnpublicar" name="Publicar" onclick="stopDefAction(event)" value="Publicar">
 </div>
 </form>
 
@@ -146,11 +148,11 @@ if(isset($_SESSION['user']) && $_SESSION['usertype'] == 1){
 <div class="publicaciones"><?php
 
 
-include "../../funciones/modificar.php";
 
-    
+include "../../funciones/muestramodificacion.php" 
 
 ?></div>
+
 
 
 
@@ -185,5 +187,6 @@ if (window.history.replaceState) { // verificamos disponibilidad
 <?php
 }
 ?>
+
 </body>
 </html>

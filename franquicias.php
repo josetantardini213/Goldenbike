@@ -99,7 +99,7 @@
                                 </tr>
                                 <tr>
                                     <td class="itemFicha">Facturación promedio anual por local</td>
-                                    <td class="contentFicha">$ 100.000.000</td>
+                                    <td class="contentFicha">$ 50.000.000</td>
                                 </tr>
                                 <tr>
                                     <td class="itemFicha">Promedio de empleados por local</td>

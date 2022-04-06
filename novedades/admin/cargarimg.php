@@ -35,13 +35,36 @@ if(isset($_SESSION['user']) && $_SESSION['usertype'] == 1){
 if (isset($_FILES['imagen'])){
 	
 	$cantidad= count($_FILES["imagen"]["tmp_name"]);
-	
+	$valoralazar = 0;
 	for ($i=0; $i<$cantidad; $i++){
 	//Comprobamos si el fichero es una imagen
 	if ($_FILES['imagen']['type'][$i]=='image/png' || $_FILES['imagen']['type'][$i]=='image/jpeg' || $_FILES['imagen']['type'][$i]=='image/webp'){
 	
+
+
+		$total_imagenes = count(glob('../../galeria/'.$valoralazar.$_FILES["imagen"]["name"][$i],GLOB_BRACE));
+
+
+		while($total_imagenes>0){
+
+
+			$valoralazar +=1; 
+
+
+			$total_imagenes = count(glob('../../galeria/'.$valoralazar.$_FILES["imagen"]["name"][$i],GLOB_BRACE));
+		}
+
+
+
+	
+
+
+
 	//Subimos el fichero al servidor
-	move_uploaded_file($_FILES["imagen"]["tmp_name"][$i],'../../galeria/'.$_FILES["imagen"]["name"][$i]);
+
+
+
+	move_uploaded_file($_FILES["imagen"]["tmp_name"][$i],'../../galeria/'.$valoralazar.$_FILES["imagen"]["name"][$i]);
 	$validar=true;
 	}
 	else $validar=false;

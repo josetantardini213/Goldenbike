@@ -7,3 +7,6 @@
 
   gtag('config', 'G-4P90M6PWG3');
 </script>
+
+
+<meta name="facebook-domain-verification" content="bdwnnb4wv0hm8sb3ev9kjxi4epj1x8" />
