@@ -3,13 +3,14 @@
 <head>
 <?php include "./Content/head.php"; ?>    
     
-    <link rel="stylesheet" href="./public/styles.css">
+    <link rel="stylesheet" href="./public/styles.css?n=1">
     <link rel="stylesheet" href="./public/sass.css">
     <link rel="stylesheet" href="./preloader/preloader.css">
-    <link rel="stylesheet" href="./public/nosotros.css">
+    <link rel="stylesheet" href="./public/nosotros.css?n=1">
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="./img/favicon.png" type="image/png">
-    
+    <link rel="stylesheet" href="./public/footer.css?n=1">
+
     <?php include "./Content/analiticpersonalizado.php"; ?>
 
     <?php include "./Content/analitic.php"; ?>    
@@ -36,11 +37,11 @@
 </div>
 </section>
 
-<div class="contentimgtext">
+<div class="contentimgtext" style="margin-bottom: 80px;">
 <img class="aparece4" src="./img/nosotros03.webp" alt="acercanosotros">
 <div class="contenedorinternoimgtext aparece4">
-<h1>CONOCENOS</h1>
-<p><strong> GOLDENBIKE </strong> es una empresa argentina, moderna e innovadora que se dedica a la comercialización de bicicletas, equipamiento, accesorios, indumentaria y artículos relacionados al ciclismo. Presta además servicio de puesta a punto y reparación.
+<h1 style="margin:10px;">CONOCENOS</h1>
+<p style="margin-left:27px; margin-right:27px;"><strong> GOLDENBIKE </strong> es una empresa argentina, moderna e innovadora que se dedica a la comercialización de bicicletas, equipamiento, accesorios, indumentaria y artículos relacionados al ciclismo. Presta además servicio de puesta a punto y reparación.
      <br><br>
      Fue fundada en 2010, en el corazón de Villa Urquiza custodiando el circuito de entrenamiento de los ciclistas que provienen de Parque Sarmiento y alrededores. Gracias a ello, hoy cuenta con uno de los puntos de venta más fuertes de la Ciudad Autónoma de Buenos Aires.
 <br><br>
@@ -66,11 +67,11 @@ Acompañando el crecimiento sostenido inauguró en 2020 su Warehouse y oficinas 
 
 
 
-<div class="contentimgtext2">
+<div class="contentimgtext2" ">
 <img class="aparece3" src="./img/nosotros01.webp" alt="acercanosotros">
 <div class="contenedorinternoimgtext2 aparece3 ">
-<h1>PRESENTE</h1>
-<p>Los hábitos de consumo y movilidad sustentable en los últimos diez años potenciaron nuestra posición en el mercado de retail creando las condiciones para replicar nuestro modelo de negocios.
+<h1 style="margin:10px;">PRESENTE</h1>
+<p style="margin-left:27px; margin-right:27px;">Los hábitos de consumo y movilidad sustentable en los últimos diez años potenciaron nuestra posición en el mercado de retail creando las condiciones para replicar nuestro modelo de negocios.
      <br><br>
      
      Comenzamos en el año 2020 nuestro proceso de expansión a nivel nacional, dotándonos de la infraestructura necesaria para construir la cadena de bicicleterías más grande de la Argentina.
@@ -108,7 +109,7 @@ Avanzamos en el rediseño de nuestros locales para movilizar la mejor experienci
 
 <div class="mision">
 <h2>Misión</h2>
-<p>Nuestra misión expresa el propósito como empresa y sirve como pauta para nuestros servicios y las acciones que la acompañan:</p>
+<p style="margin-left:27px; margin-right:27px;">Nuestra misión expresa el propósito como empresa y sirve como pauta para nuestros servicios y las acciones que la acompañan:</p>
 
 <div class="textobackblack">
     <h2>“Inspirar una vida saludable, donde la bicicleta sea el medio de transporte habitual, seguro y sustentable.”</h2>
@@ -143,11 +144,11 @@ Avanzamos en el rediseño de nuestros locales para movilizar la mejor experienci
 
 
 
-<div class="contentimgtext" style="margin-bottom: 300px;">
+<div class="contentimgtext" >
 <img class="aparece4" src="./img/nosotros02.webp" alt="acercanosotros">
 <div class="contenedorinternoimgtext aparece4">
-<h1>NUESTROS VALORES</h1>
-<p>Nos fortalecen y direccionan nuestra conducta como organización:
+<h1 style="margin:10px;">NUESTROS VALORES</h1>
+<p style="margin-left:27px; margin-right:27px;">Nos fortalecen y direccionan nuestra conducta como organización:
      <br><br>
 <strong>1. Responsabilidad Ambiental: </strong>Nos enfocamos en trabajar todos juntos para que la forma de movilidad de las personas sea amigable con el medio ambiente. 
 <br><br>
@@ -181,5 +182,7 @@ Llevamos este compromiso en cada producto que comercializamos en el mercado.
     ?>
         <script src="./public/star.js"></script>
     <script src="./public/scripts.js"></script>
+    <script src="./script.js"></script>
+
 </body>
 </html>

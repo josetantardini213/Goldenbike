@@ -4,11 +4,12 @@
 <head>
 <?php include "./Content/head.php"; ?>    
     
-    <link rel="stylesheet" href="./public/styles.css">
+    <link rel="stylesheet" href="./public/styles.css?n=1">
     <link rel="stylesheet" href="./public/sass.css">
     <link rel="stylesheet" href="./preloader/preloader.css">
     <link rel="stylesheet" href="./landing/css/style.css">
-   
+    <link rel="stylesheet" href="./public/footer.css?n=1">
+
   
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="./img/favicon.png" type="image/png">
@@ -119,7 +120,7 @@ for ($fila = 2; $fila <= $highestRow; $fila++){
 }  ?>
 </div>
 
-    <section>
+<!--     <section>
         <div class="iconos2"  style="background-color: white; margin-top:50px;">
             <div class="containeres">
                 <div class="row">
@@ -147,7 +148,7 @@ for ($fila = 2; $fila <= $highestRow; $fila++){
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
 
@@ -157,7 +158,8 @@ include "./Content/footer.php";
 
     <script src="./public/star.js"></script>
     <script src="./public/scripts.js"></script>
- 
+    <script src="./script.js"></script>
+
 <script>
 $("#horarios").click(function() {
  $('html, body').animate({

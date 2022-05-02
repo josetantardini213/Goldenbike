@@ -235,7 +235,7 @@ mark,
 .img-fluid {
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 2px;
     box-shadow: 0px 0px 4px 0.4px;
     transition: 1s;
 }
@@ -354,6 +354,8 @@ pre code {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    align-items:flex-start;
+
 }
 
 .no-gutters {
@@ -1790,9 +1792,10 @@ pre code {
     color: #495057;
     background-color: #fff;
     border-color: #ffffff;
+    border-top: 0;
     outline: 0;
-    -webkit-box-shadow: 0 0 0 0.1rem rgba(255, 251, 0, 0.788);
-    box-shadow: 0 0 0 0.1rem rgba(238, 255, 0, 0.87);
+    -webkit-box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.788);
+    box-shadow: 0 5px 0px 0.1rem rgba(55, 55, 55, 0.548);
 }
 
 .form-control::-webkit-input-placeholder {
@@ -11995,14 +11998,17 @@ label[for=email_news]>h4 {
 .box-ficha aside#box-formProveedores #formFranquicia,
 .box-ficha aside#box-formProveedores #formConsultora,
 .box-ficha aside#box-formProveedores #formProveedor {
-    background-color: black;
-    padding: 10px;
-    border-radius: 7px !important;
+    background-color: #EEEEEE;
+    padding: 20px;
+    border-radius: 3px !important;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
+    border-color: black;
+
+    color: black !important;
 }
 
 .box-ficha aside#box-formFranquicia #formFranquicia .form-control,
@@ -12014,13 +12020,14 @@ label[for=email_news]>h4 {
 .box-ficha aside#box-formProveedores #formFranquicia .form-control,
 .box-ficha aside#box-formProveedores #formConsultora .form-control,
 .box-ficha aside#box-formProveedores #formProveedor .form-control {
-    border-color: white;
-    background-color: black;
+    border-color: black;
+
+    background-color: #EEEEEE;
     padding: 12px 20px;
-    color: white;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-top-left-radius: 10px;
+    color: black;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
 }
 
 .box-ficha aside#box-formFranquicia #formFranquicia .select select,
@@ -12032,14 +12039,18 @@ label[for=email_news]>h4 {
 .box-ficha aside#box-formProveedores #formFranquicia .select select,
 .box-ficha aside#box-formProveedores #formConsultora .select select,
 .box-ficha aside#box-formProveedores #formProveedor .select select {
-    background-color: black;
+    background-color: #EEEEEE;
     padding: 12px 20px;
+    border-color: black;
+
     height: auto;
+    color: black;
     font-size: 1rem;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-top-left-radius: 10px;
+border-top: 0;
+border-left: 0;
+border-right: 0;
 }
+
 
 .box-ficha aside#box-formFranquicia #formFranquicia .select select:hover,
 .box-ficha aside#box-formFranquicia #formFranquicia .select select:active,
@@ -12068,8 +12079,8 @@ label[for=email_news]>h4 {
 .box-ficha aside#box-formProveedores #formProveedor .select select:hover,
 .box-ficha aside#box-formProveedores #formProveedor .select select:active,
 .box-ficha aside#box-formProveedores #formProveedor .select select:focus {
-    background-color: black;
-    border-color: #fff;
+    background-color: #EEEEEE;
+    border-color: black;
 }
 
 .box-ficha aside#box-formFranquicia #formFranquicia .select select option,
@@ -12081,8 +12092,8 @@ label[for=email_news]>h4 {
 .box-ficha aside#box-formProveedores #formFranquicia .select select option,
 .box-ficha aside#box-formProveedores #formConsultora .select select option,
 .box-ficha aside#box-formProveedores #formProveedor .select select option {
-    background: black;
-    color: white;
+    background: #EEEEEE;
+    color: black;
 }
 
 .box-ficha aside#box-formFranquicia #formFranquicia .select:not(.is-multiple),
@@ -12154,7 +12165,7 @@ label[for=email_news]>h4 {
 .box-ficha aside#box-formProveedores #formProveedor .select select::-moz-placeholder,
 .box-ficha aside#box-formProveedores #formProveedor input::-moz-placeholder,
 .box-ficha aside#box-formProveedores #formProveedor textarea::-moz-placeholder {
-    color: white;
+    color: black;
 }
 
 .box-ficha aside#box-formFranquicia #formFranquicia .select select::-webkit-input-placeholder,
@@ -12184,7 +12195,7 @@ label[for=email_news]>h4 {
 .box-ficha aside#box-formProveedores #formProveedor .select select::-webkit-input-placeholder,
 .box-ficha aside#box-formProveedores #formProveedor input:-webkit-input-placeholder,
 .box-ficha aside#box-formProveedores #formProveedor textarea::-moz-placeholder {
-    color: white;
+    color: black;
 }
 
 .box-ficha aside#box-formFranquicia #formFranquicia .select select::-webkit-input-placeholder,
@@ -12214,7 +12225,7 @@ label[for=email_news]>h4 {
 .box-ficha aside#box-formProveedores #formProveedor .select select::-webkit-input-placeholder,
 .box-ficha aside#box-formProveedores #formProveedor input::-webkit-input-placeholder,
 .box-ficha aside#box-formProveedores #formProveedor textarea::-webkit-input-placeholder {
-    color: white;
+    color: black;
 }
 
 .box-ficha aside#box-formFranquicia #formFranquicia .select select:-ms-input-placeholder,
@@ -12244,7 +12255,7 @@ label[for=email_news]>h4 {
 .box-ficha aside#box-formProveedores #formProveedor .select select:-ms-input-placeholder,
 .box-ficha aside#box-formProveedores #formProveedor input:-ms-input-placeholder,
 .box-ficha aside#box-formProveedores #formProveedor textarea:-ms-input-placeholder {
-    color: white;
+    color: black;
 }
 
 .box-ficha aside#box-formFranquicia #formFranquicia .select select::-ms-input-placeholder,
@@ -12274,7 +12285,7 @@ label[for=email_news]>h4 {
 .box-ficha aside#box-formProveedores #formProveedor .select select::-ms-input-placeholder,
 .box-ficha aside#box-formProveedores #formProveedor input::-ms-input-placeholder,
 .box-ficha aside#box-formProveedores #formProveedor textarea::-ms-input-placeholder {
-    color: #fff;
+    color: black;
 }
 
 .box-ficha aside#box-formFranquicia #formFranquicia .select select::placeholder,
@@ -12304,7 +12315,7 @@ label[for=email_news]>h4 {
 .box-ficha aside#box-formProveedores #formProveedor .select select::placeholder,
 .box-ficha aside#box-formProveedores #formProveedor input::placeholder,
 .box-ficha aside#box-formProveedores #formProveedor textarea::placeholder {
-    color: #fff;
+    color: black;
 }
 
 .box-ficha aside#box-formFranquicia #formFranquicia h4,
@@ -12317,9 +12328,10 @@ label[for=email_news]>h4 {
 .box-ficha aside#box-formProveedores #formConsultora h4,
 .box-ficha aside#box-formProveedores #formProveedor h4 {
     font-size: 1.8em;
-    font-weight: bold;
-    color: #fff;
+    font-weight: 100;
+    color: black;
     padding: 0 0 20px 0;
+    font-family: bebas !important;
 }
 
 
@@ -12488,6 +12500,7 @@ label[for=email_news]>h4 {
     color: #fff;
     font-size: 1.8em;
     border-radius: 3px;
+    font-family: bebaschiqui !important;
 }
 
 .box-ficha .table th,

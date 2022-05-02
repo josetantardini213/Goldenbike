@@ -18,12 +18,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-ajax-uploader/2.6.7/SimpleAjaxUploader.min.js"></script>
-    <script src="https://kit.fontawesome.com/4f3bb1a9fe.js" crossorigin="anonymous"></script>    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway:500.700">
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./ckeditor/ckeditor.js"></script>
-    <script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4f3bb1a9fe.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>.navbar-nav {
+    float: left;
+    margin: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    position: relative;}
+
+	</style>
+   <script>
 
 
 
@@ -40,7 +49,37 @@ window.onunload = function() {
     </script>
 </head>
 <body>
- 
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+                            <a class="nav-link" href="../../../blog">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../admin">Admin blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../conexiones">Conexiones y visitas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../cargarimg">Cargar imagenes a la galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../links">Links</a>
+                        </li>
+                    </ul>
+                
+                </div>
+            </div>
+        </nav>
+
+</div>
     <?php include "../../funciones/conexion.php"; 
     
     include "../../funciones/modificar.php";
@@ -70,9 +109,8 @@ if(isset($_SESSION['user']) && $_SESSION['usertype'] == 1){
 
 
 ?>
-<a class="btn alert-warning " style="margin:auto; display:flex; justify-content:center;" href="../admin.php">Volver</a>
 
-<a href="../cargarimg" class="btn alert-info " style="margin:auto; display:flex; justify-content:center; margin-top:10px;">Cargar imagenes a la galeria</a>
+
 <h1 class="tituloadmin">Modificar Publicacion.</h1>
 <div class="publinovedades">
 
@@ -156,28 +194,19 @@ include "../../funciones/muestramodificacion.php"
 
 
 
-<div class="ayudamenu">
 
-<?php include "../../../Content/menu.php"; 
-
-?>
-</div>
     <script src="../../js/blog.js"></script>
     <script src="../../../public/scripts.js"></script>
 
 
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+
    
 
     <script src="./borrar.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
 <script>
 if (window.history.replaceState) { // verificamos disponibilidad
     window.history.replaceState(null, null, window.location.href);

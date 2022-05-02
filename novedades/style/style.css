@@ -845,12 +845,18 @@ transition: all 0.1s ease 0s;
         }
         
         .h1tiendas {
-            margin-top: 50px;
+            margin-top: 185px;
             font-size: 10vw;
             font-weight: 100;
             width: 100%;
             transition: 1s;
             z-index: 30;
+        }
+        
+        @media (max-width:900px) {
+            .h1tiendas {
+                margin-top: 30px;
+            }
         }
         
         @media (max-width:650px) {
@@ -1006,8 +1012,7 @@ transition: all 0.1s ease 0s;
         
         .contenedornoticia img {
             height: 100%;
-            width: 100%;
-            aspect-ratio: 16/9;
+            max-width: 100%;
             padding: 40px;
         }
         
@@ -1028,6 +1033,7 @@ transition: all 0.1s ease 0s;
             .contenedornoticia img {
                 width: 100%;
                 padding: 5px;
+                margin-bottom: 20px;
             }
         }
         
@@ -1130,15 +1136,11 @@ transition: all 0.1s ease 0s;
         }
         
         .contentdescription img {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            width: 90%;
-            border-radius: 10px;
-            object-fit: cover;
-            aspect-ratio: 16/9;
-            transition: 0.3s;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            height: auto;
         }
         
         .contentdescription p {
@@ -1218,4 +1220,25 @@ transition: all 0.1s ease 0s;
         .contentdescription img:hover {
             transition: 0.3s;
             transform: scale(01.01);
+        }
+        
+        .botonloadmore {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            flex-direction: column;
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-size: 15px;
+            transition: 0.5s;
+        }
+        
+        .botonloadmore:hover {
+            transition: 0.5s;
+            transform: scale(1.1);
         }

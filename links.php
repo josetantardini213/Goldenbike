@@ -5,9 +5,10 @@
 <?php include "./Content/head.php"; ?>    
 
 
-    <link rel="stylesheet" href="./public/links.css">
-    <link rel="stylesheet" href="./public/styles.css">
-    <link rel="stylesheet" href="./preloader/preloader.css">
+    <link rel="stylesheet" href="./public/links.css?n=6">
+    <link rel="stylesheet" href="./public/styles.css?n=6">
+    <link rel="stylesheet" href="./preloader/preloader.css?n=6">
+    <link rel="stylesheet" href="./public/footer.css?n=6">
 
        
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
@@ -73,11 +74,15 @@ include "./novedades/funciones/conexion.php";
     <div class="content">
 
         <img src="./img/123123.jpg" style="border-radius: 1000px !important; " alt="logo">
-        <h1>Goldenbike Argentina</h1>
-        <h2>¡Elegí tu sucursal de preferencia y accedé a nuestros descuentos exclusivos!</h2>
+       <div class="divcontentitulo">
+        <h1 class="especialtitulo2">Goldenbike </h1> <h1 class="especialtitulo23"> argentina</h1>
+       </div>
+       <div class="divcontentitulo">
+        <h2><a class="especialmonserrat">¡Elegí tu sucursal de preferencia y</a> <a class=".especialmonserrat3">accedé a nuestros descuentos exclusivos!</a> </h2>
+        </div>
         <button onclick="capital()"><img src="./img/locationicon.png" width="20px">Capital Federal</button>
 
-        <div class="contentcapital" id="contentcapitalfederal" style="display: none; width: 100%;">
+        <div class="contentcapital" id="contentcapitalfederal" style="display: none; width: 100%; font-family:monserrat;">
             <a href="https://wa.me/+541160245887?text=<?php echo $texto; ?>" target="_blank"><button><img src="./img/locationicon.png" width="20px">Villa Urquiza</button></a>
             <a href="https://wa.me/+541159109911?text=<?php echo $texto; ?>" target="_blank"> <button><img src="./img/locationicon.png" width="20px">Villa Devoto</button></a>
             <a href="https://wa.me/+541164555978?text=<?php echo $texto; ?>" target="_blank"> <button><img src="./img/locationicon.png" width="20px">Belgrano</button></a>
@@ -92,7 +97,7 @@ include "./novedades/funciones/conexion.php";
 
 
 
-        <div class="contentcapital" id="contentgbanorte" style="display: none; width: 100%;">
+        <div class="contentcapital" id="contentgbanorte" style="display: none; width: 100%; font-family:monserrat;">
         <a href="https://wa.me/+541154887206?text=<?php echo $texto; ?>" target="_blank"> <button><img src="./img/locationicon.png" width="20px">Acasusso</button></a>
         <a href="https://wa.me/+541171548659?text=<?php echo $texto; ?>" target="_blank">  <button><img src="./img/locationicon.png" width="20px">Nordelta</button></a>
         <a href="https://wa.me/+541123269901?text=<?php echo $texto; ?>" target="_blank">   <button><img src="./img/locationicon.png" width="20px">Tortugas Open Mall</button></a>
@@ -132,7 +137,7 @@ include "./novedades/funciones/conexion.php";
 
 
         <div class="contentcapital" id="contentprovincia" style="display: none; width: 100%;">
-        <a href="https://wa.me/+542215074422?text=<?php echo $texto; ?>" target="_blank"> <button><img src="./img/locationicon.png" width="20px">La Plata</button></a>
+      
         <a href="https://wa.me/+5492284521334?text=<?php echo $texto; ?>" target="_blank"> <button><img src="./img/locationicon.png" width="20px">Olavarria</button></a>
 
 

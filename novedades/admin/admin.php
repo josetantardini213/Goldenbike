@@ -20,7 +20,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway:500.700">
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./modificar/ckeditor/ckeditor.js"></script>
+    <style>.navbar-nav {
+    float: left;
+    margin: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    position: relative;}
 
+	</style>
 <style>
     .alert-success {
         text-align: center;
@@ -61,17 +68,34 @@ if(isset($_SESSION['user']) && $_SESSION['usertype'] == 1){
 ?>
 
 <div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
 
-<a class="btn alert-warning " style="margin:auto; display:flex; justify-content:center;" href="../../blog">Volver</a>
-
-<a class="btn alert-info " style="margin:auto; display:flex; justify-content:center;  margin-top:10px;" href="conexiones">Conexiones y visitas</a>
-<a class="btn alert-info " style="margin:auto; display:flex; justify-content:center;  margin-top:10px;" href="links">Links</a>
-
-
-
-
-
-<a href="./cargarimg" class="btn alert-info " style="margin:auto; display:flex; justify-content:center; margin-top:10px;">Cargar imagenes a la galeria</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+                            <a class="nav-link" href="../../blog">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./admin">Admin blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./conexiones">Conexiones y visitas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./cargarimg">Cargar imagenes a la galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./links">Links</a>
+                        </li>
+                    </ul>
+                
+                </div>
+            </div>
+        </nav>
 
 
 
@@ -158,9 +182,7 @@ if(isset($_SESSION['user']) && $_SESSION['usertype'] == 1){
 include "../funciones/admin.php";
 include "../funciones/muestrapubli.php";
 ?></div>
-<div class="ayudamenu">
-<?php include "../../Content/menu.php"; ?>
-</div>
+
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

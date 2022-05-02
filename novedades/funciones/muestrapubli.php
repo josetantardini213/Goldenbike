@@ -14,7 +14,7 @@
 
 
 
-$publicacion = "SELECT portada,url,shortdescription,archivo,titulo,id_publicacion,extension FROM publicacionesblog" ;
+$publicacion = "SELECT portada,url,shortdescription,archivo,titulo,id_publicacion,extension FROM publicacionesblog order by id_publicacion desc " ;
     
     $publicacion2=mysqli_query($conexion,$publicacion);
 ?> <div class="container">

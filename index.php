@@ -5,11 +5,11 @@
     <?php include "./Content/head.php"; ?>    
 
 
-    <link rel="stylesheet" href="public/styles.css">
-    <link rel="stylesheet" href="public/sass.css">
-    <link rel="stylesheet" href="preloader/preloader.css">
-    <link rel="stylesheet" href="./public/carrusel.css">
-
+    <link rel="stylesheet" href="public/styles.css?n=3">
+    <link rel="stylesheet" href="public/sass.css?n=2">
+    <link rel="stylesheet" href="preloader/preloader.css?n=2">
+    <link rel="stylesheet" href="./public/carrusel.css?n=2">
+    <link rel="stylesheet" href="./public/footer.css?n=2">
     
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="./img/favicon.png" type="image/png">
@@ -34,18 +34,31 @@
  include "./Content/menu.php";
 
 // AQUI ESTA EL CARRUSEL EXCEL
- //$archivo = "./carrusel/carruselproductos.xlsx";
+ $archivo = "./carrusel/carruselproductosvairo.xlsx";
 
- //require_once './landing/phpexcel/Classes/PHPExcel.php';
+ require_once './landing/phpexcel/Classes/PHPExcel.php';
 
-//$inputFileType = PHPExcel_IOFactory::identify($archivo);
-//$objReader = PHPExcel_IOFactory::createReader($inputFileType);
-//$objPHPExcel = $objReader->load($archivo);
+$inputFileType = PHPExcel_IOFactory::identify($archivo);
+$objReader = PHPExcel_IOFactory::createReader($inputFileType);
+$objPHPExcel = $objReader->load($archivo);
 
 
-//$sheet = $objPHPExcel->getSheet(0);
-//$highestRow = $sheet -> getHighestRow();
-//$highestColumn = $sheet -> getHighestColumn();
+$sheet = $objPHPExcel->getSheet(0);
+$highestRow = $sheet -> getHighestRow();
+$highestColumn = $sheet -> getHighestColumn();
+
+
+$archivo2 = "./carrusel/carruselproductosreleigh.xlsx";
+
+
+$inputFileType2 = PHPExcel_IOFactory::identify($archivo2);
+$objReader2 = PHPExcel_IOFactory::createReader($inputFileType2);
+$objPHPExcel2 = $objReader2->load($archivo2);
+
+
+$sheet2 = $objPHPExcel2->getSheet(0);
+$highestRow2 = $sheet2 -> getHighestRow();
+$highestColumn2 = $sheet2 -> getHighestColumn();
 // AQUI ESTA EL CARRUSEL EXCEL FIN
 
 ?>
@@ -83,40 +96,83 @@
             
         </div>
 
- <!-- 
+ 
      
-      AQUI ESTA EL CARRUSEL 
-<div class="mensajeespecial">
+<!--       AQUI ESTA EL CARRUSEL 
 
-<p>Seleccione la tienda en la cual desea comprar su bicicleta</p>
-
-</div>
 
 
 
      
-      AQUI ESTA EL CARRUSEL    
-      <div class="center">
+<!--       AQUI ESTA EL CARRUSEL    
+ -->      
+
+ <!--
+<div class="textocarrucel">
+ <h2 >Vairo</h2>
+ <hr></hr>
+ </div>
+
+ <div id="carruselvairo" class="center">
        
        <?php
-       //$cont = 0;
-       //for ($fila = 2; $fila <= $highestRow; $fila++){
-   //if($sheet->getCell("A".$fila)->getValue() != ""){
+       $cont = 0;
+       for ($fila = 2; $fila <= $highestRow; $fila++){
+        if($sheet->getCell("C".$fila)->getValue() == "1"){
+        if($sheet->getCell("A".$fila)->getValue() != ""){
        
-     //  $cont +=1;
+       $cont +=1;
 ?>
-        <div class="element">
-            <img src="<?php // echo "./catalogoimg/".$sheet->getCell("D".$fila)->getValue(); ?>" id='<?php echo $cont; ?>' alt="Bicicleta">
-            <h2><?php // echo $sheet->getCell("A".$fila)->getValue(); ?></h2>
-            <p class="especial"><?php // if($sheet->getCell("B".$fila)->getValue() != "") { echo "$".number_format($sheet->getCell("B".$fila)->getValue(),2, ',','.'); }?></p>
-            <p><strong><?php //  if($sheet->getCell("C".$fila)->getValue() != "") { echo "$".number_format($sheet->getCell("C".$fila)->getValue(),2, ',','.'); }?></strong></p>
+        <div class="element" id="elementvairo">
+        <img class="imgcarrusel" src="<?php  echo "./catalogoimg/".$sheet->getCell("D".$fila)->getValue(); ?>" id='<?php echo $cont; ?>' alt="Bicicleta">
+            <div class="descriproductocar">    
+            <h2><?php  echo $sheet->getCell("A".$fila)->getValue(); echo " "; echo $sheet->getCell("B".$fila)->getValue(); ?></h2>
+            <p class="especial"><?php  if($sheet->getCell("F".$fila)->getValue() != "") { echo "$".number_format($sheet->getCell("F".$fila)->getValue(),2, ',','.'); }?></p>
+            <p class="precio"><strong><?php   if($sheet->getCell("E".$fila)->getValue() != "") { echo "$".number_format($sheet->getCell("E".$fila)->getValue(),2, ',','.'); }?></strong></p>
+        <p class="descripcioncarrusel"> <?php   echo $sheet->getCell("G".$fila)->getValue(); ?></p>    
         </div>
-       <?php // }} ?>
+        
+        </div>
+       <?php  }}} ?>
     </div>
 
-      AQUI ESTA EL CARRUSEL FIN   
--->
 
+
+
+
+
+
+    <div class="textocarrucel" style="text-align:right; margin-right:40px;">
+ <h2  >Releigh</h2>
+ <hr style="   display: inline-block;"></hr>
+ </div>
+
+ <div id="carruselreleigh" class="center">
+       
+       <?php
+       $cont2 = 0;
+       for ($fila2 = 2; $fila2 <= $highestRow2; $fila2++){
+        if($sheet2->getCell("C".$fila2)->getValue() == "1"){
+        if($sheet2->getCell("A".$fila2)->getValue() != ""){
+       
+       $cont2 +=1;
+?>
+        <div class="element" id="elementreleight">
+        <img class="imgcarrusel" src="<?php  echo "./catalogoimg/".$sheet2->getCell("D".$fila2)->getValue(); ?>" id='<?php echo $cont2; ?>' alt="Bicicleta">
+            <div class="descriproductocar">    
+            <h2><?php  echo $sheet2->getCell("A".$fila2)->getValue(); echo " "; echo $sheet2->getCell("B".$fila2)->getValue(); ?></h2>
+            <p class="especial"><?php  if($sheet2->getCell("F".$fila2)->getValue() != "") { echo "$".number_format($sheet2->getCell("F".$fila2)->getValue(),2, ',','.'); }?></p>
+            <p class="precio"><strong><?php   if($sheet2->getCell("E".$fila2)->getValue() != "") { echo "$".number_format($sheet2->getCell("E".$fila2)->getValue(),2, ',','.'); }?></strong></p>
+        <p class="descripcioncarrusel"> <?php   echo $sheet2->getCell("G".$fila2)->getValue(); ?></p>    
+        </div>
+        
+        </div>
+       <?php  }}} ?>
+    </div>
+
+        -->
+<!--     //AQUI ESTA EL CARRUSEL FIN   
+ --
 
   <!--
     <div id="slider" class="slider">
@@ -300,7 +356,7 @@
     </div>
     
     <div class="tienda norte" id="norte">
-    <a href="acasusso" target="_blank">Acasusso </a>
+    <a href="acassuso" target="_blank">Acassuso </a>
           
     </div>
     
@@ -367,10 +423,6 @@
 
 
 
-  <div class="tienda provincia" id="norte">
-  <a href="laplata" target="_blank">La Plata </a>
- 
-  </div>
 
   <div class="tienda provincia" id="norte">
   <a href="olavarria" target="_blank"> Olavarría </a>
@@ -380,8 +432,8 @@
 
     </div>
 
-    <div class="mapa">
-    <img src="./img/goldenbike.webp"  alt="goldenbike">
+    <div class="mapa" >
+    <img  src="./img/goldenbike.webp"  alt="goldenbike">
    
         <iframe class="mapaofi"  src="https://www.google.com/maps/d/u/0/embed?mid=1PRpDyHgrrkL_zo1ZaTxjOihzZAMWSpzJ&ehbc=2E312F"></iframe>
     </div>
@@ -394,12 +446,7 @@
 
 </section>
 
-
-
-
-
-
-
+<!-- 
     <section>
         <div class="iconos2" style="background-color: white;">
             <div class="containeres">
@@ -430,7 +477,7 @@
         </div>
     </section>
 
-
+ -->
 
 
 
@@ -448,8 +495,8 @@
    
 
 
-    <script src="./public/star.js"></script>
-    <script src="./public/scripts.js">
+    <script src="./public/star.js?n=2"></script>
+    <script src="./public/scripts.js?n=2">
     </script>
 
 
@@ -493,6 +540,7 @@
 
     
 </script>
+<script src="./script.js"></script>
 
 <script>
     $(".botonimage").click(function() {
@@ -507,24 +555,6 @@ $(".botonimage").click(function() {
  }, 1000);
 });
 
-$(".center").click(function() {
- $('html, body').animate({
- scrollTop: $("#mapasseccion").offset().top
-
- }, 1000);
-
- $('.mensajeespecial').animate({
- opacity:'1'
- 
- }, 500);
-
- setTimeout(() => {
-    $('.mensajeespecial').animate({
- opacity:'0'
- 
- }, 500);
- }, 3000);
-});
 
 
 </script>
@@ -532,25 +562,23 @@ $(".center").click(function() {
 
 <script>
         $('.center').slick({
-            centerMode: true,
-            centerPadding: '60px',
-            slidesToShow: 5,
+            
+            slidesToShow: 4,
             autoplay: true,
             autoplaySpeed: 2000,
-            arrows: false,
+            arrows: true,
             adaptiveHeight: true,
 
             responsive: [{
                     breakpoint: 1920,
                     settings: {
                         centerMode: true,
-                        slidesToShow: 6
+                        slidesToShow: 4
                     }
                 }, {
                     breakpoint: 1420,
                     settings: {
-                        centerMode: true,
-                        slidesToShow: 5
+                        slidesToShow: 4
                     }
                 }, {
                     breakpoint: 1200,
@@ -587,6 +615,108 @@ $(".center").click(function() {
                 }
             ]
         });
+
+
+        let valor = $(window).width();
+
+
+        $('#carruselreleigh > .slick-list > .slick-track > .element').mousemove(function(){
+
+      
+if(valor >= 1100){
+  $('#carruselreleigh > .slick-list').stop().animate({
+    
+    height: "600px"
+  })
+  
+}
+
+});
+  $('#carruselreleigh > .slick-list > .slick-track > .element').hover(function(){
+
+      
+if(valor >= 1100){
+  $('#carruselreleigh > .slick-list').stop().animate({
+    
+    height: "600px"
+  })
+  
+}
+
+});
+
+
+
+$('#carruselreleigh > .slick-list > .slick-track > .element').mouseout(function(){
+    console.log('salio')
+if(valor >= 1100){
+  $('#carruselreleigh > .slick-list').stop().animate({
+    
+    height: "300px"
+  })
+}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$('#carruselvairo > .slick-list > .slick-track > .element').mousemove(function(){
+
+      
+if(valor >= 1100){
+  $('#carruselvairo > .slick-list').stop().animate({
+    
+    height: "600px"
+  })
+  
+}
+
+});
+  $('#carruselvairo > .slick-list > .slick-track > .element').hover(function(){
+
+      
+if(valor >= 1100){
+  $('#carruselvairo > .slick-list').stop().animate({
+    
+    height: "600px"
+  })
+  
+}
+
+});
+
+
+
+$('#carruselvairo > .slick-list > .slick-track > .element').mouseout(function(){
+    console.log('salio')
+if(valor >= 1100){
+  $('#carruselvairo > .slick-list').stop().animate({
+    
+    height: "300px"
+  })
+}
+});
+
+
+
+
+
     </script>
 
 

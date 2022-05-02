@@ -20,9 +20,48 @@ if(isset($_SESSION['user']) && $_SESSION['usertype'] == 1){
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/4f3bb1a9fe.js" crossorigin="anonymous"></script>
+    <style>.navbar-nav {
+    float: left;
+    margin: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    position: relative;}
+
+	</style>
 </head>
 <body>
 
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+                            <a class="nav-link" href="../../blog">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./admin">Admin blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./conexiones">Conexiones y visitas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./cargarimg">Cargar imagenes a la galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./links">Links</a>
+                        </li>
+                    </ul>
+                
+                </div>
+            </div>
+        </nav>
+
+</div>
 
         <table class="table table-stripped table-hove">
             <thead class="table-dark">

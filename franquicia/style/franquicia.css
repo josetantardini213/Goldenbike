@@ -16,7 +16,7 @@ body {
 
 @media(max-width:700px) {
     .imgfranquicia {
-        position: absolute;
+        position: relative;
         top: 0px;
     }
 }
@@ -106,51 +106,36 @@ div.reset {
     }
 }
 
-#nombrePersona {
-    background-image: url('../img/user_icon-icons.com_57997.svg');
-    background-repeat: no-repeat;
-    background-position: 90% center;
-    background-size: 20px;
+.contentimgtext img {
+    aspect-ratio: 16/9 !important;
+    object-fit: cover !important;
+    height: 500px;
 }
 
-#apellidoPersona {
-    background-image: url('../img/user_icon-icons.com_57997.svg');
-    background-repeat: no-repeat;
-    background-position: 90% center;
-    background-size: 20px;
+.contenedorinternoimgtext {
+    margin-top: 180px;
 }
 
-#provincias {
-    background-image: url('../img/pin_gps_location_find_map_search_icon-icons.com_59982.svg');
-    background-repeat: no-repeat;
-    background-position: 90% center;
-    background-size: 25px;
+.nuestratienda {
+    margin-bottom: -10px !important;
 }
 
-#localidad {
-    background-image: url('../img/pin_gps_location_find_map_search_icon-icons.com_59982.svg');
-    background-repeat: no-repeat;
-    background-position: 90% center;
-    background-size: 25px;
+@media(max-width:1100px) {
+    .contentimgtext img {
+        aspect-ratio: 16/9 !important;
+        object-fit: cover !important;
+        height: auto;
+    }
+    .contenedorinternoimgtext {
+        margin-top: 10px;
+    }
+    .nuestratienda {
+        margin-bottom: 30px !important;
+    }
 }
 
-#telefono {
-    background-image: url('../img/mobilephone_79875.svg');
-    background-repeat: no-repeat;
-    background-position: 90% center;
-    background-size: 27px;
-}
-
-#email {
-    background-image: url('../img/mail_email_message_electronic_online_web_icon-icons.com_59986.svg');
-    background-repeat: no-repeat;
-    background-position: 90% center;
-    background-size: 22px;
-}
-
-#consulta {
-    background-image: url('../img/note-task-comment-message-edit-write_108613.svg');
-    background-repeat: no-repeat;
-    background-position: 90% center;
-    background-size: 22px;
+@media (max-width:800px) {
+    .especial {
+        margin: 25px;
+    }
 }

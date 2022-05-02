@@ -4,11 +4,15 @@
 <head>
 <?php include "./Content/head.php"; ?>    
 
-    <link rel="stylesheet" href="./public/styles.css">
+    <link rel="stylesheet" href="./public/styles.css?n=2">
+    <link rel="stylesheet" href="./public/sass.css?n=2">
+    <link rel="stylesheet" href="./public/nosotros.css?n=2">
+
     <link rel="stylesheet" href="./franquicia/style/franquicia.css">
     <link rel="stylesheet" href="./franquicia/style/bootstrap.css">
     <link rel="stylesheet" href="./preloader/preloader.css">
-    
+    <link rel="stylesheet" href="./public/footer.css?n=1">
+
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="./img/favicon.png" type="image/png">
     <?php include "./Content/analiticpersonalizado.php"; ?>
@@ -21,7 +25,7 @@
 
 
 <img class="imgfranquicia" src="./franquicia/img/hf_franquicia_goldenbike.jpg" alt="franquicia">
-
+<!-- 
 <div class="noticia aparece" data-sr-id="0" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.6s cubic-bezier(1, 1, 1, 1) 0.2s, transform 0.6s cubic-bezier(1, 1, 1, 1) 0.2s;">
   <img class="izquierda" src="./franquicia/img/logo_franquicia_goldenbike.jpg">
   <h1 class="h1franquicia">GOLDENBIKE</h1>
@@ -29,8 +33,40 @@
   <p class="pnoticia">Los 5 puntos claves: 1. Primera franquicia argentina en el rubro bicicletería. 2. Brinda la oportunidad de invertir en un negocio con una fórmula exitosa. 3. Reconocimiento de la marca. 4. Alto rendimiento de inversión. Posibilidad de recupero en menos de 12 meses. 5. Diversas fuentes de ingresos. Amplia variedad de productos.</p>
   <div class="reset"></div>
 </div>
+ -->
+ <section>
 
 
+<div class="nuestratienda">
+<h1 class="h1nosotros" style="font-size:5.3vw;" >El rubro de mayor crecimiento a nivel mundial</h1>      
+<div class="pdentrop" >
+        <h1  id="textograndegolden" style="  transition: 0.1s;">GOLDENBIKE</h1>
+        </div>
+      
+
+</div>
+</section>
+
+
+<div class="contentimgtext">
+    <img class="aparece4" src="./img/nosotros01.webp" alt="acercanosotros">
+    <div class="contenedorinternoimgtext aparece4" >
+        <h1 class="especial" style="font-size:28px; font-family:bebas !important; font-weight:100;">Los 5 puntos claves:</h1>
+        <p class="especial" style="font-size:16px;" >
+
+        <strong style="font-size:18px;">1.</strong> Primera franquicia argentina en el rubro bicicletería.
+        <br><br>
+        <strong style="font-size:18px;">2.</strong> Brinda la oportunidad de invertir en un negocio con una formulá exitosa.
+        <br><br>
+        <strong style="font-size:18px;">3.</strong> Reconocimiento de la marca.
+        <br><br>
+        <strong style="font-size:18px;">4.</strong> Alto rendimiento de la inversión. Posibilidad de recuperación en menos de 12 meses. 
+        <br><br>
+        <strong style="font-size:18px;">5.</strong> Diversas fuentes de ingresos. Amplia variedad de productos.
+    </p>
+
+    </div>
+</div>
 
 
 <div class="container-fluid aparece" >
@@ -193,12 +229,10 @@
                     </div> 
 
                    
-                    <div class="row" style="margin-top:100px;">
+                    <div class="row" >
                         <div class="col-12 col-lg-12 text-center float-md-none float-right">
                                                         <img src="./franquicia/img/1_franquicia_goldenbike.jpg" alt="Franquicia GoldenBike" class="img-fluid mt-3 mb-3 aparece5">
-                                                        <img src="./franquicia/img/2_franquicia_goldenbike.jpg" alt="Franquicia GoldenBike" class="img-fluid mb-3 aparece5">
-                                                        <img src="./franquicia/img/3_franquicia_goldenbike.jpg" alt="Franquicia GoldenBike" class="img-fluid mb-3 aparece5">
-                                                        
+                                                       
                         </div>  
                     </div>                
 
@@ -229,6 +263,8 @@ include "./Content/footer.php";
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
     <script src="./franquicia/js/postfranquicias.js"></script>
+    <script src="./script.js"></script>
+
 </body>
 
 </html>

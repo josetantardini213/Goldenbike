@@ -1,0 +1,59 @@
+{
+  "name": "Goldenbike",
+  "short_name": "Goldenbike",
+  "description": "La cadena de bicicleterías más grande del país",
+  "background_color": "#000000",
+  "theme_color": "#B99F5A",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "./?utm_source=web_app_manifest",
+  "scope": "./",
+  "lang": "es-MX",
+  "icons": [
+    {
+      "src": "./img/pwa/goldenbike1024.jpg",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/pwa/goldenbike512.jpg",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/pwa/goldenbike384.jpg",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/pwa/goldenbike256.jpg",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/pwa/goldenbike192.jpg",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/pwa/goldenbike96.jpg",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/pwa/goldenbike64.jpg",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/pwa/goldenbike32.jpg",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/pwa/goldenbike16.jpg",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ]
+}

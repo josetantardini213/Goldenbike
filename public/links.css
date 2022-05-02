@@ -19,6 +19,8 @@ body {
     flex-direction: column;
     color: white;
     overflow: hidden;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .content>img {
@@ -136,10 +138,47 @@ button:hover {
 
 .contentcapital {
     margin-left: 90px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media(max-width:1000px) {
+    .contentcapital {
+        margin-left: 0px;
+        width: 80% !important;
+    }
 }
 
 @media (max-width:500px) {
     .redes i {
         margin-bottom: 20px !important;
     }
+}
+
+button {
+    font-family: monserrat;
+}
+
+.divcontentitulo {
+    display: flex;
+}
+
+.especialtitulo2 {
+    margin-right: 8px;
+    font-family: bebas;
+}
+
+.especialtitulo23 {
+    font-family: bebaschiqui !important;
+    font-weight: 100;
+}
+
+.especialmonserrat {
+    margin-right: 5px;
+    font-family: monserrat !important;
+    font-weight: 100;
+}
+
+.especialmonserrat3 {
+    font-family: monserratbold !important;
 }

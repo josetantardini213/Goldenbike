@@ -87,12 +87,20 @@ $(window).scroll(function(event) {
 
     var windowHeight = $(window).scrollTop();
     var windowHeight2 = $(window).scrollTop();
+    var windowHeight3 = $(window).scrollTop();
+    var windowHeight4 = $(window).scrollTop();
+
     var golden = $("#textograndegolden").offset().top;
+    var carruselvairo = $("#carruselvairo >.slick-list").offset().top;
+    var carruselreleigh = $("#carruselreleigh >.slick-list").offset().top;
     windowHeight2 = windowHeight2 - golden + 150;
+    windowHeight3 = windowHeight3 - carruselvairo + 150;
+    windowHeight4 = windowHeight4 - carruselreleigh + 150;
     $('#textograndegolden').css('transform', 'translateX(' + windowHeight2 * 0.50 + 'px)');
 
+    $('#carruselvairo >.slick-list').css('transform', 'translateX(' + windowHeight3 * -0.15 + 'px)');
 
-
+    $('#carruselreleigh >.slick-list').css('transform', 'translateX(' + windowHeight4 * 0.15 + 'px)');
 
 
 

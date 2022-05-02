@@ -28,6 +28,13 @@
                    }
                    
                    @font-face {
+                       font-family: 'monserratbold';
+                       src: url('../fuente/static/Montserrat-Bold.ttf') format('truetype');
+                       font-style: normal;
+                       font-weight: normal;
+                   }
+                   
+                   @font-face {
                        font-family: 'book';
                        src: url('../fuente/BebasNeueBook.otf') format('truetype');
                        font-style: normal;
@@ -405,173 +412,7 @@
                        font-family: 'Poppins', sans-serif;
                        text-decoration: none;
                    }
-                   
-                   footer {
-                       width: 100%;
-                       position: relative;
-                       bottom: 0;
-                       left: 0;
-                       background: #111;
-                       display: flex;
-                       justify-content: center;
-                       align-items: center;
-                       margin: auto;
-                   }
-                   
-                   footer .content {
-                       max-width: 1350px;
-                       margin: auto;
-                       padding: 10px;
-                       padding-top: 50px;
-                       display: flex;
-                       flex-wrap: wrap;
-                       justify-content: center;
-                       display: flex;
-                       justify-content: center;
-                       align-items: center;
-                       margin: auto;
-                   }
-                   
-                   footer .content p,
-                   a {
-                       color: #fff;
-                       font-size: 18px;
-                   }
-                   
-                   footer .content .box {
-                       width: 25%;
-                       transition: all 0.4s ease;
-                   }
-                   
-                   footer .content .topic {
-                       font-size: 22px;
-                       font-weight: 600;
-                       color: #fff;
-                       margin-bottom: 16px;
-                       margin-top: 16px;
-                   }
-                   
-                   .topic2 {
-                       position: absolute;
-                       font-size: 24px;
-                       font-weight: 600;
-                       color: #fff;
-                       margin-bottom: 16px;
-                       margin-left: 125px;
-                       margin-top: -40px;
-                   }
-                   
-                   @media (max-width:979px) {
-                       .topic2 {
-                           margin-top: 0px;
-                           font-size: 22px;
-                           font-weight: 600;
-                           color: #fff;
-                           margin-top: 16px;
-                           margin-bottom: 16px;
-                           position: unset;
-                           margin-left: 0px;
-                       }
-                   }
-                   
-                   footer .content p {
-                       text-align: justify;
-                   }
-                   
-                   footer .content .lower i {
-                       padding-right: 16px;
-                   }
-                   
-                   footer .content .middle {
-                       padding-left: 80px;
-                   }
-                   
-                   footer .content .middle a {
-                       line-height: 32px;
-                   }
-                   
-                   footer .content .media-icons a {
-                       font-size: 16px;
-                       height: 45px;
-                       width: 45px;
-                       display: inline-block;
-                       text-align: center;
-                       line-height: 50px;
-                       border-radius: 100px;
-                       margin: 30px 5px 0 0;
-                       transition: all 0.3s ease;
-                       background-color: white;
-                       color: black;
-                   }
-                   
-                   .content .media-icons a:hover {
-                       background-color: #B99F5A;
-                   }
-                   
-                   footer .bottom {
-                       width: 100%;
-                       text-align: right;
-                       color: #B99F5A;
-                       display: table-column;
-                   }
-                   
-                   footer .bottom a {
-                       color: #B99F5A;
-                   }
-                   
-                   footer a {
-                       transition: all 0.3s ease;
-                   }
-                   
-                   footer a:hover {
-                       color: #B99F5A;
-                   }
-                   
-                   @media (max-width:1100px) {
-                       footer .content .middle {
-                           padding-left: 50px;
-                       }
-                   }
-                   
-                   @media (max-width:950px) {
-                       footer .content .box {
-                           width: 50%;
-                       }
-                       .content .right {
-                           margin-top: 40px;
-                       }
-                   }
-                   
-                   @media (max-width:560px) {
-                       footer {
-                           position: relative;
-                       }
-                       footer .content .box {
-                           width: 100%;
-                           margin-top: 0px;
-                       }
-                       footer .content .middle {
-                           padding-left: 0;
-                       }
-                       footer {
-                           display: flex;
-                           justify-content: center;
-                           text-align: center;
-                       }
-                       .content {
-                           margin-left: 0px !important;
-                       }
-                   }
                    /* estrellas */
-                   
-                   .ec-stars-wrapper a {
-                       text-decoration: none;
-                       display: inline-block;
-                       /* Volver a dar tamaño al texto */
-                       font-size: 32px;
-                       font-size: 2rem;
-                       color: #B99F5A;
-                   }
                    
                    video {
                        display: inline-block;
@@ -937,10 +778,11 @@
                    }
                    
                    .slick-prev {
+                       z-index: 40;
                        font-size: 0;
                        position: absolute;
                        right: 55px;
-                       top: -64px;
+                       top: 20px;
                        width: 30px;
                        height: 30px;
                        border: 1px solid #ffffff00;
@@ -952,13 +794,14 @@
                        border-bottom: 15px solid transparent;
                        margin-right: 10px;
                        transition: 1s;
+                       background-color: transparent;
                    }
                    
                    .slick-next {
                        font-size: 0;
                        position: absolute;
                        right: 18px;
-                       top: -64px;
+                       top: 20px;
                        width: 30px;
                        height: 30px;
                        border: 1px solid #ffffff00;
@@ -1577,7 +1420,7 @@
                    
                    .botonimage img:hover {
                        transition: 0.4s;
-                       background-color: #000000;
+                       background-color: #3d3d3d;
                        transform: scale(01.01);
                    }
                    
@@ -1632,3 +1475,7 @@
                            transform: scale(1, 1);
                        }
                    }*/
+                   
+                   .botonloadmore {
+                       opacity: 0;
+                   }

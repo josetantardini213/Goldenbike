@@ -32,9 +32,11 @@
     
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="./img/favicon.png" type="image/png">
-    <link rel="stylesheet" href="./public/styles.css">
-    <link rel="stylesheet" href="./novedades/style/style.css">
+    <link rel="stylesheet" href="./public/styles.css?n=1">
+    <link rel="stylesheet" href="./novedades/style/style.css?n=2">
     <link rel="stylesheet" href="./preloader/preloader.css">
+    <link rel="stylesheet" href="./public/footer.css?n=1">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/4f3bb1a9fe.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -87,6 +89,7 @@ fjs.parentNode.insertBefore(js, fjs);
 
 if($pub['portada'] != "" && $pub['portada'] != "NULL"){
 ?>
+
 <img class="img" src="./novedades/funciones/<?php echo $pub['portada']; ?>" alt="franquicia">
     
 <?php }else{
@@ -95,15 +98,15 @@ if($pub['portada'] != "" && $pub['portada'] != "NULL"){
 
 <?php
 } ?>
-<section>
 
+<article>
 
     <div class="nuestratienda">
     <?php
 
 if($pub['titulo'] != null){
 ?>
-    <h1 class="h1noticia" ><?php echo $pub['titulo']; ?></h1> 
+    <h1 class="h1noticia" ><?php echo $pub['titulo']; ?></h1>
     <?php } ?>     
     <div class="pdentrop" >
             <h1  id="textograndegolden" style=" transition: 0.1s;">GOLDENBIKE</h1>
@@ -113,33 +116,33 @@ if($pub['titulo'] != null){
     </div>
 
 
-</section>
 
-<section>
+
+
 <div class="contenedornoticia">
 
 
-<img src="./novedades/funciones/<?php echo $pub['archivo']; ?>" hspace="5" vspace="5" style="float: left; object-fit: cover;" />
+<img src="./novedades/funciones/<?php echo $pub['archivo']; ?>" hspace="5" vspace="5" style="float: left; object-fit: cover; width:100%;" />
 <div class="contentdescription">
 <?php echo $pub['descripcion']; ?>
 </div>
 </div>
-</section>
 
 
-<section><div class="compartir">
+<div class="compartir">
 <div class="fb-share-button" >
 
  <h2>Compartí esta nota:    <a href="https://api.whatsapp.com/send?text=Mira%20esta%20noticia%20de%20Goldenbike%20https://www.goldenbike.com.ar/<?php echo $pub['url'] ;?>" data-action="share/whatsapp/share" target="_blank" style="margin-right:10px;"><i  class="fa fa-whatsapp" style="padding-left:17px; padding-right:17px;"></i></a><a href="https://www.facebook.com/sharer/sharer.php?u=https://www.goldenbike.com.ar/<?php echo $pub['url'] ;?>"><i class="fa fa-facebook"></i></a></h2>
     
     </div>
-</div></section>
+</div>
 
 <?php } ?>
-
+</article>
     <script src="./public/star.js"></script>
     <script src="./public/scripts.js"></script>
-   
+    <script src="./script.js"></script>
+
     <?php
     
     include "./Content/footer.php";  

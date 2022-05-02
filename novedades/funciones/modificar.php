@@ -1,7 +1,6 @@
 
 <?php
 $verdad = $_GET["modifi"];
-$usuario=$_SESSION['user'];
 if (isset($_POST["Publicar"])) {
 
 

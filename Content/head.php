@@ -13,9 +13,11 @@
     <meta property="og:image:type" content="image/jpeg" /> 
     <meta property="og:image:width" content="400" /> 
     <meta property="og:image:height" content="300" />
-
-
-    
+    <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="./manifest.json">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/4f3bb1a9fe.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,7 +27,7 @@
     <script>
 window.onload = function() {
     $("#loading").fadeOut("slow");
-    muestra();
+    muestra()
 };
 </script>
 </script>

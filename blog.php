@@ -4,9 +4,10 @@
 ?>
 <head>
 <?php include "./Content/head.php"; ?>    
-    <link rel="stylesheet" href="./public/styles.css">
-    <link rel="stylesheet" href="./novedades/style/style.css">
-    <link rel="stylesheet" href="./preloader/preloader.css">
+    <link rel="stylesheet" href="./public/styles.css?n=33">
+    <link rel="stylesheet" href="./novedades/style/style.css?n=33">
+    <link rel="stylesheet" href="./preloader/preloader.css?n=33">
+    <link rel="stylesheet" href="./public/footer.css?n=33">
 
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="./img/favicon.png" type="image/png">
@@ -37,11 +38,21 @@
 </section>
 
 
-<section>
+
+
+    <div class="iconos3" style="background-color: white;">
+        <div class="containeres">
+        <div class="row1" id="post-data">
        <?php
        include "./novedades/funciones/muestrapubliblog.php";
        ?>
-    </section>
+       
+        
+       </div>
+</div>
+</div>
+<button class="botonloadmore" id="vermas">Ver mas contenido</button>
+
 
     <div id="progressBar"></div>
     <div id="progressBarContainer"></div>
@@ -86,9 +97,57 @@
 include "./Content/footer.php";
 ?>
 
+<script>
+
+lastid2 = 0;
+
+
+$(window).scroll(function () { 
+    var golden = $(".botonloadmore").offset().top - 400;
+    var scrollelement = $(window).scrollTop();
+if(golden <= scrollelement){
+    $('.botonloadmore').click()
+
+}
+});
+
+
+$('.botonloadmore').click(function() {
+    
+
+
+        var last_id = $(".postid:last").attr("value");
+        
+    if(last_id != lastid2){
+            loadMore(last_id);
+    }
+    lastid2=last_id;
+
+
+});
+
+
+function loadMore(last_id){
+    
+  $.ajax({
+      url: './novedades/funciones/load-more.php?last_id=' + last_id,
+      type: "get",
+      beforeSend: function(){
+          $('.ajax-load').show();
+      }
+  }).done(function(data){
+      $('.ajax-load').hide();
+      $("#post-data").append(data);
+  }).fail(function(jqXHR, ajaxOptions, thrownError){
+      alert('server not responding...');
+  });
+}
+</script> 
+
     <script src="./public/star.js"></script>
     <script src="./public/scripts.js"></script>
-    
+    <script src="./script.js"></script>
+
 <script>
 
     variable = 0;
@@ -103,7 +162,7 @@ if(variable == 1){
     },1000);
 
     $("#"+id+" .h2especial").stop().animate({
-        marginTop:-200,
+        marginTop:-100,
         opacity:1
         
        
