@@ -73,6 +73,9 @@ window.onunload = function() {
                         <li class="nav-item">
                             <a class="nav-link" href="../links">Links</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./linkspublicidad">Links tiendas</a>
+                        </li>
                     </ul>
                 
                 </div>

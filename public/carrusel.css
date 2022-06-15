@@ -3,6 +3,8 @@
     margin-right: 20px;
     cursor: pointer;
     margin-top: 70px;
+    -webkit-font-smoothing: subpixel-antialiased;
+    backface-visibility: hidden;
 }
 
 .element img {
@@ -11,6 +13,8 @@
     width: 100%;
     object-fit: cover;
     z-index: 10;
+    -webkit-font-smoothing: subpixel-antialiased;
+    backface-visibility: hidden;
 }
 
 .descriproductocar {
@@ -19,6 +23,8 @@
     box-shadow: 0px 0px 5px 1px black;
     left: 0;
     right: 0;
+    -webkit-font-smoothing: subpixel-antialiased;
+    backface-visibility: hidden;
     margin: auto;
     padding-top: 70px !important;
     background-color: rgba(0, 0, 0, 0.701);
@@ -31,18 +37,30 @@
     text-align: center;
     transform: perspective(500px) translate3d(-50px, -2700px, -5000px);
     transition: 0.7s;
+    font-family: monserrat !important;
+
+    -webkit-font-smoothing: subpixel-antialiased;
+    backface-visibility: hidden;
 }
 
 .descriproductocar p {
     margin-top: 10px;
     opacity: 0;
+    font-family: monserrat !important;
+
     transition: 0.9s;
     font-size: 12px;
+    -webkit-font-smoothing: subpixel-antialiased;
+    backface-visibility: hidden;
 }
 
 .descriproductocar h2 {
     opacity: 0;
+    font-family: monserrat !important;
+
     transition: 0.9s;
+    -webkit-font-smoothing: subpixel-antialiased;
+    backface-visibility: hidden;
 }
 
 @media (min-width:1100px) {
@@ -52,97 +70,137 @@
         height: 100%;
         min-height: 300px;
         transform: perspective(500px) translate3d(40px, -60px, 0px);
-        
+        -webkit-font-smoothing: subpixel-antialiased;
+        backface-visibility: hidden;
     }
     .element:hover img {
         transition: 1s;
         animation: flotante 1.5s infinite linear;
+        -webkit-font-smoothing: subpixel-antialiased;
+        backface-visibility: hidden;
     }
     .element:hover .descriproductocar p {
         transition: 0.9s;
         opacity: 1;
+        -webkit-font-smoothing: subpixel-antialiased;
+        backface-visibility: hidden;
     }
     .element:hover .descriproductocar h2 {
         transition: 0.9s;
         opacity: 1;
+        -webkit-font-smoothing: subpixel-antialiased;
+        backface-visibility: hidden;
     }
 }
 
 .especial {
     text-decoration: line-through;
+    -webkit-font-smoothing: subpixel-antialiased;
+    backface-visibility: hidden;
 }
 
 .precio {
     font-size: 15px !important;
+    -webkit-font-smoothing: subpixel-antialiased;
+    backface-visibility: hidden;
 }
 
 @keyframes flotante {
     0% {
-        
         transform: perspective(500px) translate3d(0px, 0px, 0px);
-        
     }
     50% {
         transform: perspective(500px) translate3d(0px, 10px, 0px);
     }
     100% {
-
         transform: perspective(500px) translate3d(0px, 0px, 0px);
-        
     }
 }
 
-
-.textocarrucel h2{
-    margin-top: 100px;
+.textocarrucel h2 {
+    margin-top: 50px;
     margin-left: 40px;
     font-size: 50px !important;
-
-
+    -webkit-font-smoothing: subpixel-antialiased;
+    backface-visibility: hidden;
 }
-.textocarrucel hr{
-    width: 20%;
-    animation: width 6s  linear;
 
+.textocarrucel hr {
+    width: 30%;
+    animation: width 6s linear;
+    -webkit-font-smoothing: subpixel-antialiased;
+    backface-visibility: hidden;
 }
 
 @keyframes width {
-    0%{
-width: 0%;
+    0% {
+        width: 0%;
     }
-    100%{
-width: 20%;
+    100% {
+        width: 30%;
     }
 }
+
 @keyframes width2 {
-    0%{
-width: 0%;
+    0% {
+        width: 0%;
     }
-    100%{
-width: 40%;
+    100% {
+        width: 100%;
     }
 }
-@media (max-width:700px){
-    .textocarrucel hr{
-        width:40%;
 
-        animation: width2 6s  linear;
+@media (max-width:700px) {
+    .textocarrucel hr {
+        width: 100%;
+        animation: width2 6s linear;
     }
-
-    .slick-list{
+    .slick-list {
         height: 300px;
     }
+    .textocarrucel h2 {
+        margin-left: 0px;
+        margin-right: 0px;
+    text-align: center;
+    }
 }
 
-.slick-list{
+.slick-list {
     overflow: hidden;
 }
-.center {    overflow: hidden;
+
+.center {
+    overflow: hidden;
 }
 
-#carruselreleigh > .slick-prev{
+#carruselreleigh>.slick-prev {
     left: 25px;
 }
-#carruselreleigh > .slick-next{
+
+#carruselreleigh>.slick-next {
     left: 73px;
 }
+.descriproductocar ul{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 15px;
+
+}
+.descriproductocar > ul > li{
+    text-align: start;
+    justify-content: flex-start !important;
+    align-items: flex-start;
+    text-align: left;
+
+}
+
+
+
+@media (max-width:410px){
+    .textocarrucel h2{
+        font-size: 12vw !important;
+    }
+}
+

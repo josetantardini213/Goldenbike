@@ -252,8 +252,8 @@ include "./Content/footer.php";
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./public/star.js"></script>
-    <script src="./public/scripts.js"></script>
+    <script src="./public/star.js?p=2"></script>
+    <script src="./public/scripts.js?p=2"></script>
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
@@ -263,7 +263,7 @@ include "./Content/footer.php";
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
     <script src="./franquicia/js/postfranquicias.js"></script>
-    <script src="./script.js"></script>
+    <script src="./script.js?p=2"></script>
 
 </body>
 

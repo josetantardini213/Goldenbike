@@ -1,5 +1,5 @@
 body {
-    background-color: #3D3B3C !important;
+    background-color: #ffffff !important;
     margin-top: 50px !important;
 }
 
@@ -17,7 +17,7 @@ body {
     text-align: center;
     margin: auto;
     flex-direction: column;
-    color: white;
+    color: rgb(0, 0, 0);
     overflow: hidden;
     margin-left: 20px;
     margin-right: 20px;
@@ -112,19 +112,21 @@ button {
     border-radius: 5px;
     border: none;
     font-weight: bolder;
+    color: white;
+    background-color: rgb(31, 31, 31);
 }
 
 button:hover {
-    color: white;
-    background-color: #CEA965;
+    color: rgb(0, 0, 0);
+    background-color: #C3C3C3;
 }
 
 .redes i {
     margin-top: 50px !important;
     margin-bottom: 50px !important;
-    margin: 20px;
-    color: black;
-    background-color: white;
+    margin: 10px;
+    color: rgb(0, 0, 0);
+    background-color: #C3C3C3;
     border-radius: 100%;
     padding: 20px;
     transition: 0.3s;
@@ -132,8 +134,8 @@ button:hover {
 
 .redes i:hover {
     transition: 0.3s;
-    color: white;
-    background-color: #CEA965;
+    color: rgb(0, 0, 0);
+    background-color: #474747;
 }
 
 .contentcapital {
@@ -165,20 +167,41 @@ button {
 
 .especialtitulo2 {
     margin-right: 8px;
-    font-family: bebas;
+    font-family: bebas !important ;
+    font-weight: 100 !important;
 }
 
 .especialtitulo23 {
     font-family: bebaschiqui !important;
     font-weight: 100;
+    font-style: normal !important;
+
+
 }
 
 .especialmonserrat {
     margin-right: 5px;
     font-family: monserrat !important;
     font-weight: 100;
+    font-size: 18px;
 }
 
 .especialmonserrat3 {
     font-family: monserratbold !important;
+    font-size: 18px;
+
+}
+
+@media (max-width:700px){
+.especialmonserrat {
+    margin-right: 5px;
+    font-family: monserrat !important;
+    font-weight: 100;
+    font-size: 18px !important;
+}
+
+.especialmonserrat3 {
+    font-family: monserratbold !important;
+    font-size: 18px !important;
+}
 }

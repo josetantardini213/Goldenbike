@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:type" content="article" />
 	<meta property="og:title" content="<?php echo $pub3["titulo"]; ?>" />
-	<meta property="og:description" content="La cadena de bicicleterías más grande del país." />
+	<meta property="og:description" content="La cadena de bicicleterías más grande de Argentina." />
 	<meta property="og:url" content="https://www.goldenbike.com.ar/<?php echo $pub3["url"];?>" />
 	<meta property="og:site_name" content="Goldenbike" />
     <meta name="theme-color" content="#B99F5A" />
@@ -139,9 +139,9 @@ if($pub['titulo'] != null){
 
 <?php } ?>
 </article>
-    <script src="./public/star.js"></script>
-    <script src="./public/scripts.js"></script>
-    <script src="./script.js"></script>
+    <script src="./public/star.js?p=2"></script>
+    <script src="./public/scripts.js?p=2"></script>
+    <script src="./script.js?p=2"></script>
 
     <?php
     

@@ -4,10 +4,10 @@
 ?>
 <head>
 <?php include "./Content/head.php"; ?>    
-    <link rel="stylesheet" href="./public/styles.css?n=33">
-    <link rel="stylesheet" href="./novedades/style/style.css?n=33">
-    <link rel="stylesheet" href="./preloader/preloader.css?n=33">
-    <link rel="stylesheet" href="./public/footer.css?n=33">
+    <link rel="stylesheet" href="./public/styles.css?n=34">
+    <link rel="stylesheet" href="./novedades/style/style.css?n=34">
+    <link rel="stylesheet" href="./preloader/preloader.css?n=34">
+    <link rel="stylesheet" href="./public/footer.css?n=34">
 
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="./img/favicon.png" type="image/png">
@@ -103,7 +103,7 @@ lastid2 = 0;
 
 
 $(window).scroll(function () { 
-    var golden = $(".botonloadmore").offset().top - 400;
+    var golden = $(".botonloadmore").offset().top - 700;
     var scrollelement = $(window).scrollTop();
 if(golden <= scrollelement){
     $('.botonloadmore').click()
@@ -144,9 +144,9 @@ function loadMore(last_id){
 }
 </script> 
 
-    <script src="./public/star.js"></script>
-    <script src="./public/scripts.js"></script>
-    <script src="./script.js"></script>
+    <script src="./public/star.js?p=4"></script>
+    <script src="./public/scripts.js?p=4"></script>
+    <script src="./script.js?p=3"></script>
 
 <script>
 

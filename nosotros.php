@@ -180,9 +180,9 @@ Llevamos este compromiso en cada producto que comercializamos en el mercado.
     include "./Content/footer.php";  
     
     ?>
-        <script src="./public/star.js"></script>
-    <script src="./public/scripts.js"></script>
-    <script src="./script.js"></script>
+        <script src="./public/star.js?p=2"></script>
+    <script src="./public/scripts.js?p=2"></script>
+    <script src="./script.js?p=2"></script>
 
 </body>
 </html>

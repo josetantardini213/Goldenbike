@@ -521,3 +521,11 @@ margin-top: 20px;
     
     }
 }
+
+
+.stylezonas{
+    cursor: pointer;
+}
+.stylezonas > div > a{
+    cursor: pointer;
+}

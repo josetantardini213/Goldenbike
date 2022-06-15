@@ -55,6 +55,9 @@ if(isset($_SESSION['user']) && $_SESSION['usertype'] == 1){
                         <li class="nav-item">
                             <a class="nav-link" href="./links">Links</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./linkspublicidad">Links tiendas</a>
+                        </li>
                     </ul>
                 
                 </div>

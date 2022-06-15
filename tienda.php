@@ -74,6 +74,12 @@ for ($fila = 2; $fila <= $highestRow; $fila++){
     echo $sheet->getCell("F".$fila)->getValue();
 }
  ?>" style="width:100%; " alt="">
+   
+<img class="imagenlanding2" src="./img/<?php 
+for ($fila = 2; $fila <= $highestRow; $fila++){
+    echo $sheet->getCell("G".$fila)->getValue();
+}
+ ?>" style="width:100%; " alt="">
 <h1 class="hola">GOLDENBIKE <a href="#"><?php 
 for ($fila = 2; $fila <= $highestRow; $fila++){
     echo "".$sheet->getCell("A".$fila)->getValue();
@@ -156,9 +162,9 @@ for ($fila = 2; $fila <= $highestRow; $fila++){
 include "./Content/footer.php";
 ?>
 
-    <script src="./public/star.js"></script>
-    <script src="./public/scripts.js"></script>
-    <script src="./script.js"></script>
+    <script src="./public/star.js?p=2"></script>
+    <script src="./public/scripts.js?p=2"></script>
+    <script src="./script.js?p=2"></script>
 
 <script>
 $("#horarios").click(function() {
@@ -175,6 +181,7 @@ $("#ubicacion").click(function() {
 
 
 </script>        
+
 
 </body>
         </html>

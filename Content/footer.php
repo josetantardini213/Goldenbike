@@ -1,4 +1,4 @@
-<footer>
+<footer style="overflow:hidden;">
     <div class="top">
         <div class="wrapper">
             <a href="https://www.goldenbike.com.ar/" class="logo321">
@@ -37,27 +37,70 @@
                         <i class="fa fa-arrow-down" style="color: white; text-align: center;"></i>
                     </div>
                     
-                        <div class="tiendaslista">                            <div><a href="https://www.goldenbike.com.ar/villaurquiza" target="_blank">Villa Urquiza</a></div>
+                        <div class="tiendaslista">                            
+                        
+                        
+                        <div class="capitalfederal stylezonas"><a>Capital Federal</a></div>
+                            <div class="capital" style="display: none;">
+                            <div><a href="https://www.goldenbike.com.ar/villaurquiza" target="_blank">Villa Urquiza</a></div>
                             <div><a href="https://www.goldenbike.com.ar/villadevoto" target="_blank">Villa Devoto</a></div>
                             <div><a href="https://www.goldenbike.com.ar/belgrano" target="_blank">Belgrano</a></div>
                             <div><a href="https://www.goldenbike.com.ar/canitas" target="_blank">Cañitas</a></div>
                             <div><a href="https://www.goldenbike.com.ar/recoleta" target="_blank">Recoleta</a></div>
                             <div><a href="https://www.goldenbike.com.ar/caballito" target="_blank">Caballito</a></div>
+                            <div><a href="https://www.goldenbike.com.ar/saavedra" target="_blank">Saavedra</a></div>
+                            <div><a href="https://www.goldenbike.com.ar/nunez" target="_blank">Núñez</a></div>
+                            <div><a href="https://www.goldenbike.com.ar/villaluro" target="_blank">Villa Luro</a></div>
+
+                            </div>
+                            
+
+
+                            <div class="gban stylezonas"><a>Gba Norte</a></div>
+
+                            <div class="gbanorte" style="display: none;">
+
                             <div><a href="https://www.goldenbike.com.ar/acassuso" target="_blank">Acassuso</a></div>
                             <div><a href="https://www.goldenbike.com.ar/nordelta" target="_blank">Nordelta</a></div>
-                            <div><a href="https://www.goldenbike.com.ar/olivos" target="_blank">Olivos</a></div>
-                           
-                            
-                        
-                 
-                         
                             <div><a href="https://www.goldenbike.com.ar/tom" target="_blank">Tortugas Open Mall</a></div>
                             <div><a href="https://www.goldenbike.com.ar/sanmiguel" target="_blank">San Miguel</a></div>
+                            <div><a href="https://www.goldenbike.com.ar/olivos" target="_blank">Olivos</a></div>
+
+                            </div>
+
+                           
+                            
+                            <div class="gbao stylezonas"><a>Gba Oeste</a></div>
+                 
+                            <div class="gbaoeste" style="display: none;">
                             <div><a href="https://www.goldenbike.com.ar/parqueleloir" target="_blank">Parque Leloir</a></div>
+                            </div>
+
+
+                            <div class="gbas stylezonas"><a>Gba Sur</a></div>
+                            <div class="gbasur" style="display: none;">
                             <div><a href="https://www.goldenbike.com.ar/lomasdezamora" target="_blank">Lomas de Zamora</a></div>
-                            <div><a href="https://www.goldenbike.com.ar/quilmes" target="_blank">Quilmes</a></div>
                             <div><a href="https://www.goldenbike.com.ar/montegrande" target="_blank">Monte Grande</a></div>
+                            <div><a href="https://www.goldenbike.com.ar/quilmes" target="_blank">Quilmes</a></div>
+
+                            </div>
+                          
+
+
+                            <div class="pcia stylezonas"><a>Pcia. de BA</a></div>
+                            <div class="provincia" style="display: none;">
                             <div><a href="https://www.goldenbike.com.ar/olavarria" target="_blank">Olavarria</a></div>
+                            <div><a href="https://www.goldenbike.com.ar/sanjuan" target="_blank">San Juan</a></div>
+
+                            </div>
+
+
+                            <div class="arg stylezonas"><a>Cuyo</a></div>
+                            <div class="argentina" style="display: none;">
+                            <div><a href="https://www.goldenbike.com.ar/sanjuan" target="_blank">San Juan</a></div>
+
+                            </div>
+
                     </div>
                 </div>
             </div>
@@ -114,6 +157,50 @@ $('.flecha').click(function () {
     $('.flecha i').toggle('slow')
     $('.tiendaslista').toggle('slow');
 
+
+});
+
+
+$('.capitalfederal').click(function () { 
+    
+    $('.capital').toggle('slow');
+    
+
+});
+
+$('.gban').click(function () { 
+    
+    $('.gbanorte').toggle('slow');
+    
+
+});
+
+$('.gbao').click(function () { 
+    
+    $('.gbaoeste').toggle('slow');
+    
+
+});
+
+
+$('.gbas').click(function () { 
+    
+    $('.gbasur').toggle('slow');
+    
+
+});
+
+$('.pcia').click(function () { 
+    
+    $('.provincia').toggle('slow');
+    
+
+});
+
+$('.arg').click(function () { 
+    
+    $('.argentina').toggle('slow');
+    
 
 });
 

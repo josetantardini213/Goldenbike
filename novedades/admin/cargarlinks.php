@@ -71,7 +71,6 @@ $publicacion = "SELECT * FROM links" ;
         
         ?>   
     <button class="btn btn-danger" onclick="borrar('<?php echo $pub['palabraclave']; ?>')">Borrar</button>
-    
     </div><?php
 
     }

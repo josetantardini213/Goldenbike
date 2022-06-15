@@ -80,13 +80,13 @@
     margin: auto;
     background-color: white;
     padding: 5%;
-    margin-top: 12px;
+    margin-top: 0px;
     z-index: 0;
 }
 
 @media (max-width: 700px) {
     .nuestratienda {
-        margin-top: 10px;
+        margin-top: -30px;
     }
 }
 
@@ -358,12 +358,22 @@
         font-size: 12vw;
     }
 }
+.imagenlanding2 {
+display: none;
+}
+.imagenlanding {
+display: block;
+}
+@media (max-width: 700px) {
+    .imagenlanding2 {
+    display: block;
+    }
 
-@media (max-width: 450px) {
     .imagenlanding {
-        height: 150px;
+    display: none;
     }
 }
+
 
 @media (min-width: 800px) {
     .mapalanding h1 {

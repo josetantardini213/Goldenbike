@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
+
     <?php include "./Content/head.php"; ?>    
 
 
-    <link rel="stylesheet" href="public/styles.css?n=3">
-    <link rel="stylesheet" href="public/sass.css?n=2">
-    <link rel="stylesheet" href="preloader/preloader.css?n=2">
-    <link rel="stylesheet" href="./public/carrusel.css?n=2">
-    <link rel="stylesheet" href="./public/footer.css?n=2">
+    <link rel="stylesheet" href="public/styles.css?n=50">
+    <link rel="stylesheet" href="public/sass.css?n=50">
+    <link rel="stylesheet" href="preloader/preloader.css?n=50">
+    <link rel="stylesheet" href="./public/carrusel.css?n=50">
+    <link rel="stylesheet" href="./public/footer.css?n=50">
     
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="./img/favicon.png" type="image/png">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="./public/3bicicletas.css?n=4">
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
    
    <?php include "./Content/analiticpersonalizado.php"; ?>
    
     <?php include "./Content/analitic.php"; ?>    
-
-   
+ 
 </head>
 
 <body>
@@ -34,7 +34,7 @@
  include "./Content/menu.php";
 
 // AQUI ESTA EL CARRUSEL EXCEL
- $archivo = "./carrusel/carruselproductosvairo.xlsx";
+ $archivo = "./carrusel/carrucelbicicletas.xlsx";
 
  require_once './landing/phpexcel/Classes/PHPExcel.php';
 
@@ -48,7 +48,7 @@ $highestRow = $sheet -> getHighestRow();
 $highestColumn = $sheet -> getHighestColumn();
 
 
-$archivo2 = "./carrusel/carruselproductosreleigh.xlsx";
+$archivo2 = "./carrusel/carrucelaccesorios.xlsx";
 
 
 $inputFileType2 = PHPExcel_IOFactory::identify($archivo2);
@@ -70,7 +70,6 @@ $highestColumn2 = $sheet2 -> getHighestColumn();
 
 
     <img src="./img/portada_02.webp" width="100%" alt="Portada">
-
         <!--<iframe width="100%" height="900" src="https://www.youtube.com/embed/3PuufyEmT8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 
         <div class="texto">
@@ -84,19 +83,7 @@ $highestColumn2 = $sheet2 -> getHighestColumn();
     </div>
 
 
-<div class="botonimage">
 
-            
-         <img src="./img/raleigth-01.svg" alt="imagen-releight">
- 
-  
-         <img src="./img/VAIRO-01.svg" alt="imagen-releight">
- 
-                
-            
-        </div>
-
- 
      
 <!--       AQUI ESTA EL CARRUSEL 
 
@@ -104,12 +91,12 @@ $highestColumn2 = $sheet2 -> getHighestColumn();
 
 
      
-<!--       AQUI ESTA EL CARRUSEL    
+       AQUI ESTA EL CARRUSEL    
  -->      
 
- <!--
+
 <div class="textocarrucel">
- <h2 >Vairo</h2>
+ <h2 >Nuestras bicicletas</h2>
  <hr></hr>
  </div>
 
@@ -124,8 +111,8 @@ $highestColumn2 = $sheet2 -> getHighestColumn();
        $cont +=1;
 ?>
         <div class="element" id="elementvairo">
-        <img class="imgcarrusel" src="<?php  echo "./catalogoimg/".$sheet->getCell("D".$fila)->getValue(); ?>" id='<?php echo $cont; ?>' alt="Bicicleta">
-            <div class="descriproductocar">    
+       <img class="imgcarrusel" onclick="location.href='bicicleta?b=<?php echo $sheet->getCell('I'.$fila)->getValue(); ?>'" src="<?php  echo "./catalogoimg/".$sheet->getCell("D".$fila)->getValue(); ?>" id='<?php echo $cont; ?>' alt="Bicicleta">
+            <div class="descriproductocar" style="background-color: <?php echo $sheet->getCell("H".$fila)->getValue(); ?> ;">    
             <h2><?php  echo $sheet->getCell("A".$fila)->getValue(); echo " "; echo $sheet->getCell("B".$fila)->getValue(); ?></h2>
             <p class="especial"><?php  if($sheet->getCell("F".$fila)->getValue() != "") { echo "$".number_format($sheet->getCell("F".$fila)->getValue(),2, ',','.'); }?></p>
             <p class="precio"><strong><?php   if($sheet->getCell("E".$fila)->getValue() != "") { echo "$".number_format($sheet->getCell("E".$fila)->getValue(),2, ',','.'); }?></strong></p>
@@ -142,11 +129,7 @@ $highestColumn2 = $sheet2 -> getHighestColumn();
 
 
 
-    <div class="textocarrucel" style="text-align:right; margin-right:40px;">
- <h2  >Releigh</h2>
- <hr style="   display: inline-block;"></hr>
- </div>
-
+<!-- 
  <div id="carruselreleigh" class="center">
        
        <?php
@@ -159,7 +142,7 @@ $highestColumn2 = $sheet2 -> getHighestColumn();
 ?>
         <div class="element" id="elementreleight">
         <img class="imgcarrusel" src="<?php  echo "./catalogoimg/".$sheet2->getCell("D".$fila2)->getValue(); ?>" id='<?php echo $cont2; ?>' alt="Bicicleta">
-            <div class="descriproductocar">    
+            <div class="descriproductocar" style="background-color: <?php echo $sheet2->getCell("H".$fila2)->getValue(); ?> ;">    
             <h2><?php  echo $sheet2->getCell("A".$fila2)->getValue(); echo " "; echo $sheet2->getCell("B".$fila2)->getValue(); ?></h2>
             <p class="especial"><?php  if($sheet2->getCell("F".$fila2)->getValue() != "") { echo "$".number_format($sheet2->getCell("F".$fila2)->getValue(),2, ',','.'); }?></p>
             <p class="precio"><strong><?php   if($sheet2->getCell("E".$fila2)->getValue() != "") { echo "$".number_format($sheet2->getCell("E".$fila2)->getValue(),2, ',','.'); }?></strong></p>
@@ -168,13 +151,12 @@ $highestColumn2 = $sheet2 -> getHighestColumn();
         
         </div>
        <?php  }}} ?>
-    </div>
+    </div> -->
 
-        -->
+   
 <!--     //AQUI ESTA EL CARRUSEL FIN   
  --
 
-  <!--
     <div id="slider" class="slider">
 	<div id="track"  class="slide-track">
     <div class="slide">
@@ -315,7 +297,7 @@ $highestColumn2 = $sheet2 -> getHighestColumn();
 
 
     <section>
-<div id="mapasseccion" class="mapas">
+<div id="mapasseccion" class="mapas" style="overflow: hidden;">
 
 
 <div class="letraverti">
@@ -352,6 +334,22 @@ $highestColumn2 = $sheet2 -> getHighestColumn();
     </div>
     <div class="tienda capital" id="capital">
     <a href="caballito" target="_blank">Caballito </a>
+          
+    </div>
+    <div class="tienda capital" id="capital">
+    <a href="saavedra" target="_blank">Saavedra </a>
+     
+    </div>
+
+
+
+    <div class="tienda capital" id="capital">
+    <a href="nunez" target="_blank">Núñez </a>
+          
+    </div>
+
+    <div class="tienda capital" id="capital">
+    <a href="villaluro" target="_blank">Villa Luro </a>
           
     </div>
     
@@ -429,13 +427,18 @@ $highestColumn2 = $sheet2 -> getHighestColumn();
 
   </div>
 
+  <div class="tienda argentina" id="norte">
+  <a href="sanjuan" target="_blank"> San Juan </a>
+
+  </div>
+
 
     </div>
 
-    <div class="mapa" >
-    <img  src="./img/goldenbike.webp"  alt="goldenbike">
+    <div class="mapa aparece3" style="overflow: hidden; margin-top:5px !important;" >
+    <img  src="./img/goldenbike.webp" style="z-index: 0; overflow: hidden;" alt="goldenbike">
    
-        <iframe class="mapaofi"  src="https://www.google.com/maps/d/u/0/embed?mid=1PRpDyHgrrkL_zo1ZaTxjOihzZAMWSpzJ&ehbc=2E312F"></iframe>
+        <iframe class="mapaofi" style="overflow: hidden;"  src="https://www.google.com/maps/d/u/0/embed?mid=1PRpDyHgrrkL_zo1ZaTxjOihzZAMWSpzJ&ehbc=2E312F"></iframe>
     </div>
 
 
@@ -495,8 +498,8 @@ $highestColumn2 = $sheet2 -> getHighestColumn();
    
 
 
-    <script src="./public/star.js?n=2"></script>
-    <script src="./public/scripts.js?n=2">
+    <script src="./public/star.js?p=3"></script>
+    <script src="./public/scripts.js?p=3">
     </script>
 
 
@@ -542,22 +545,7 @@ $highestColumn2 = $sheet2 -> getHighestColumn();
 </script>
 <script src="./script.js"></script>
 
-<script>
-    $(".botonimage").click(function() {
- $('html, body').animate({
- scrollTop: $("#mapasseccion").offset().top
- }, 1000);
-});
 
-$(".botonimage").click(function() {
- $('html, body').animate({
- scrollTop: $("#mapasseccion").offset().top
- }, 1000);
-});
-
-
-
-</script>
 </script>
 
 <script>

@@ -91,16 +91,29 @@ $(window).scroll(function(event) {
     var windowHeight4 = $(window).scrollTop();
 
     var golden = $("#textograndegolden").offset().top;
-    var carruselvairo = $("#carruselvairo >.slick-list").offset().top;
-    var carruselreleigh = $("#carruselreleigh >.slick-list").offset().top;
+
+
+
+    if ($("#carruselvairo >.slick-list").length > 0) {
+        var carruselvairo = $("#carruselvairo >.slick-list").offset().top;
+        windowHeight3 = windowHeight3 - carruselvairo + 150;
+
+        $('#carruselvairo >.slick-list').css('transform', 'translateX(' + windowHeight3 * -0.15 + 'px)');
+
+    }
+
+    if($("#carruselreleigh >.slick-list").length > 0){
+        var carruselreleigh = $("#carruselreleigh >.slick-list").offset().top;
+
+        windowHeight4 = windowHeight4 - carruselreleigh + 150;
+
+        $('#carruselreleigh >.slick-list').css('transform', 'translateX(' + windowHeight4 * 0.15 + 'px)');
+
+    }
+
     windowHeight2 = windowHeight2 - golden + 150;
-    windowHeight3 = windowHeight3 - carruselvairo + 150;
-    windowHeight4 = windowHeight4 - carruselreleigh + 150;
     $('#textograndegolden').css('transform', 'translateX(' + windowHeight2 * 0.50 + 'px)');
 
-    $('#carruselvairo >.slick-list').css('transform', 'translateX(' + windowHeight3 * -0.15 + 'px)');
-
-    $('#carruselreleigh >.slick-list').css('transform', 'translateX(' + windowHeight4 * 0.15 + 'px)');
 
 
 
@@ -195,6 +208,20 @@ $(".provincia").mouseout(function() {
 
 });
 
+$(".argentina").mouseover(function() {
+    let elementoModificado = document.querySelector(".mapas > .letraverti > h1");
+    elementoModificado.innerHTML = "Cuyo";
+    $("#gbanor").css("visibility", "visible");
+});
+
+$(".argentina").mouseout(function() {
+
+
+    $("#gbanor").css("visibility", "hidden");
+
+});
+
+
 
 $(".oeste").mouseover(function() {
 
@@ -210,3 +237,55 @@ $(".oeste").mouseout(function() {
     $("#gbanor").css("visibility", "hidden");
 
 });
+
+
+
+
+
+
+//3bicicletas
+$('#dosimg').css('opacity', '0');
+$('#tresimg').css('opacity', '0');
+cont = 0
+setInterval(() => {
+    cont += 1;
+
+    if (cont == 1) {
+        $("#unoimg").animate({
+            opacity: 0,
+
+        }, 500);
+        // Animation complete.
+        $("#dosimg").animate({
+            opacity: 1,
+
+        }, 500);
+    }
+
+    if (cont == 2) {
+        $("#dosimg").animate({
+            opacity: 0,
+
+        }, 500);
+        $("#tresimg").animate({
+            opacity: 1,
+
+        }, 500);
+    }
+
+    if (cont == 3) {
+        $("#tresimg").animate({
+            opacity: 0,
+
+        }, 500);
+
+        $("#unoimg").animate({
+            opacity: 1,
+
+        }, 500);
+
+        cont = 0;
+    }
+
+
+}, 2000);

@@ -19,6 +19,8 @@ AddOutputFilterByType DEFLATE application/rss+xml
 
 AddOutputFilterByType DEFLATE application/javascript
 
+AddOutputFilterByType DEFLATE text/php
+
 AddOutputFilterByType DEFLATE application/x-javascript
 
 AddOutputFilterByType DEFLATE application/xml
@@ -53,6 +55,30 @@ BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 
 </IfModule>
 
+# Disable Caching
+<IfModule mod_headers.c>
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+</IfModule>
+
+<IfModule mod_expires.c>
+          ExpiresActive on
+          ExpiresByType image/jpg "access plus 1 hours"
+          ExpiresByType image/png "access plus 1 hours"
+          ExpiresByType image/gif "access plus 1 hours"
+          ExpiresByType image/jpeg "access plus 1 hours"
+          ExpiresByType text/html "access plus 1 hours"
+	  ExpiresByType text/php "access plus 1 hours"
+ 	  ExpiresByType text/css "access plus 1 hours"
+          ExpiresByType image/svg+xml "access plus 1 hours"
+          ExpiresByType image/x-icon "access plus 1 hours"
+          ExpiresByType application/pdf "access plus 1 hours"
+          ExpiresByType text/javascript "access plus 1 hours"
+          ExpiresByType application/x-javascript "access plus 1 hours"
+          ExpiresByType application/javascript "access plus 1 hours"
+</IfModule>
+
 RewriteEngine On 
 RewriteCond %{HTTPS} off 
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
@@ -79,6 +105,8 @@ RewriteRule ^(quilmes)$ tienda.php?landing=$1
 RewriteRule ^(montegrande)$ tienda.php?landing=$1
 RewriteRule ^(laplata)$ tienda.php?landing=$1
 RewriteRule ^(olavarria)$ tienda.php?landing=$1
+RewriteRule ^(saavedra)$ tienda.php?landing=$1
+
 RewriteRule ^(blog)$ blog.php
 RewriteRule ^(nosotros)$ nosotros.php
 RewriteRule ^(home)$ index.php

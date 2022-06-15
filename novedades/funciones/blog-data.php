@@ -9,7 +9,7 @@ $id = 0;
 $id = $id+1;    
         if(strcmp($pub["extension"],"")==0){
 
-?>  <div class="publitexto col-md-3 wow fadeInDown aparece"  data-wow-duration="1s" data-wow-delay="0.1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInDown; color:black;">  <a href="<?php echo $pub['url'];  ?>"><?php
+?>  <div class="publitexto col-md-3 "   style="opacity:1;">  <a href="<?php echo $pub['url'];  ?>"><?php
         echo "<h2 style='margin-top:20px; color:black;'>".$pub['titulo']." </h2>";
         echo "<p>".$pub['shortdescription']."</p> <br>";
 
@@ -24,7 +24,7 @@ $id = $id+1;
 if (strcmp($pub["extension"],"jpg")==0 || strcmp($pub["extension"],"png")==0  || strcmp($pub["extension"],"webp")==0) {
   ?>
  
-<article class="postid col-md-3 wow fadeInDown aparece"  id="<?php echo 'element'.$pub['id_publicacion']; ?>" value="<?php echo $pub['id_publicacion']; ?>" data-wow-duration="1s" data-wow-delay="0.1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInDown; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all 1s ease 0s, opacity 0.6s cubic-bezier(1, 1, 1, 1) 0.2s, transform 0.6s cubic-bezier(1, 1, 1, 1) 0.2s;">
+<article class="postid col-md-3"  id="<?php echo 'element'.$pub['id_publicacion']; ?>" value="<?php echo $pub['id_publicacion']; ?>" data-wow-duration="1s" data-wow-delay="0.1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInDown; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: all 1s ease 0s, opacity 0.6s cubic-bezier(1, 1, 1, 1) 0.2s, transform 0.6s cubic-bezier(1, 1, 1, 1) 0.2s;">
 <a href="<?php echo $pub['url'];  ?>">
 <div class="cobertor" onmouseover="hover('<?php echo 'element'.$pub['id_publicacion']; ?>')" onmouseout="contrarioahover('<?php echo 'element'.$pub['id_publicacion']; ?>')"></div>
 
